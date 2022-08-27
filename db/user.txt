@@ -1,23 +1,23 @@
 
 name: Jamie
 image:https://cdn.britannica.com/20/200220-050-394A5A7C/Jamie-Oliver-2016.jpg
-email address:jamie@gmail.com
+email:jamie@gmail.com
 password: chicken
 
 
 name: Nigella
 image:https://pbs.twimg.com/profile_images/1493693969825423365/pqVtK9q0_400x400.jpg
-email address: nigella@gmail.com
+email : nigella@gmail.com
 password: chicken
 
 
 name: SaltBae
 image:https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Salt_Bae.png/800px-Salt_Bae.png
-email address: saltbae@gmail.com
+email : saltbae@gmail.com
 password: chicken
 
 name: Gordon
 image:https://www.grandcentralpublishing.com/wp-content/uploads/2017/06/GR.jpg?resize=500%2C700
-email address: gordon@gmail.com
+email : gordon@gmail.com
 password: chicken
 

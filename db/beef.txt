@@ -2,9 +2,9 @@
 
 https://img.jamieoliver.com/jamieoliver/recipe-database/46257452.jpg?tr=w-800,h-1066
 
-serves: 4
+servings: 4
 
-Cooking time: 2 hours
+cooking_time: 2 hours
 
 Ingredients
 400 g stewing beef
@@ -20,7 +20,7 @@ olive oil
 natural yoghurt , optional
 1 fresh red chilli , optional
 
-Method
+Methods
 Get your ingredients out, then boil the kettle and place a medium lidded pan on a high heat, a frying pan on a high heat and a griddle pan on a high heat.
 Fill the medium pan with boiling salted water.
 Trim the end off the stalk from 1 head of broccoli, then cut up the head (like you see in the picture) and add to the pan, cover and boil for 4 minutes.
@@ -39,11 +39,11 @@ ________________________________
 
 https://img.jamieoliver.com/jamieoliver/recipe-database/76647784.jpg?tr=w-800,h-1066
 
-Serves: 4
+servings: 4
 
-Cooking time: 30 mins
+cooking_time: 30 mins
 
-Ingredients
+ingredients
 320 g tenderstem broccoli
 2 x 250 g lean flank steak
 2 teaspoons coriander seeds
@@ -57,7 +57,7 @@ olive oil
 1 lime
 1 fresh red chilli
 
-Method
+methods
 Trim the broccoli, cutting any larger broccoli stems in half lengthways, then place in a heatproof bowl and cover with boiling water. Add a good pinch of sea salt and leave for 10 minutes, then drain and put to one side. Half-fill a pan with water and bring to the boil.
 Slice the steaks against the grain into finger-sized strips and season with sea salt and black pepper.
 Pound the coriander seeds in a pestle and mortar, or bash with the base of a pan, until fine. Sprinkle over the steak so they stick to it and give it a lovely, fragrant flavour.
@@ -73,11 +73,11 @@ Cut the lime into wedges for squeezing over, and finely slice the chilli (deseed
 
 https://img.jamieoliver.com/jamieoliver/recipe-database/46260123.jpg?tr=w-800,h-1066
 
-Serves: 4
+servings: 4
 
-Cooking time:30 min
+cooking_time:30 min
 
-Ingredients
+ingredients
 150 g leftover braised beef , such as shin, feather or brisket
 2 sprigs of fresh flat-leaf parsley
 a few fresh chives
@@ -89,7 +89,7 @@ a few fresh chives
 75 g panko breadcrumbs
 200 ml groundnut oil
 
-Method
+methods
 Shred the beef, then roughly chop the parsley leaves, chives and gherkins.
 Place in a large bowl with the mashed potato, mustard and a pinch of sea salt and black pepper, then mix until combined.
 Using your hands, roll it into four balls, before flattening each one into a patty.
@@ -100,11 +100,11 @@ In a serving bowl, mix the yoghurt and Tabasco, then serve it alongside the beef
 ___________________
  4. Beef kofta curry
 
- Serves: 4
+servings: 4
 
- Cooking: 20 mins
+cooking_time: 20 mins
 
- Ingredients
+ingredients
 CURRY
 1 x 250 g pack of ready-to-eat Puy lentils
 1 heaped teaspoon garam masala
@@ -121,7 +121,7 @@ olive oil
 ½ x 400 g tin of light coconut milk
 1 lemon
 
-Method
+methods
 Ingredients out • Kettle boiled • Large frying pan, high heat • Medium lidded casserole pan, high heat • Liquidizer
 
 START COOKING
