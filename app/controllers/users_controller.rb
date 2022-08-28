@@ -5,9 +5,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create user_params # filtered list of fields
+    @user = User.create user_params # filtered list of fields
 
-    redirect_to users_path
+    if @user.persisted?
+      session[:user_id] = @user.id #LOGIN automatically
+      redirect_to user_path(@user.id) #go to user's profile page
+    else
+      render :new 
+      #this does NOT run the new() method above, just shows the template at the template for the current 'create' method
+    end
   end
 
   # READ ---------- 
