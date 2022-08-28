@@ -1,3 +1,16 @@
 .field_with_errors input {
    border: 2px solid red;
 }
+
+.dish_thumbnail{
+    width: 25%;
+}
+
+ul{
+   list-style-type: none;
+}
+
+
+.artwork{
+    width: 40%;
+}

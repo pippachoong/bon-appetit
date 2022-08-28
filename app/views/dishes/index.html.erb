@@ -14,7 +14,8 @@
 <ul>
     <% @dishes.each do |dish| %>
     <li>
-        <%= link_to dish.name, dish_path(dish.id) %>
+        <%= link_to dish.name, dish_path(dish.id)  %>
+        <%= image_tag dish.image, class: "dish_thumbnail" %>
     </li>
     <% end%>
 
