@@ -13,10 +13,13 @@
 <%# TO DO: delete show page - for the user only%>
 <%= link_to 'Remove Recipe', dish_path(@dish), method: 'delete' %>
 
+<%= link_to 'Back to home', dishes_path %>
+
+
 <%#Link to user profile %>
 <div class = "profile">
     Recipe shared by <%= link_to @dish.user.name, user_path(@dish.user.id) %>
-    
+
     <%#TO DO: show user's picture %>
 
 </div>
@@ -56,7 +59,16 @@
 
 </div>
 
-
-
-
-
+<div> 
+  <div>
+    <p>Comments</p>
+    <%= form_with(model: [@dish, @dish.comments.build]) do |f| %>
+      <div>
+        <%= f.label 'New comment' %>
+        <%= f.text_area :review %>
+      </div>
+      <%= f.submit 'Submit' %>
+    <%= render @dish.comments %>
+    <% end %>
+  </div>
+</div>

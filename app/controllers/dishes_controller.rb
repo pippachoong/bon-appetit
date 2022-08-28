@@ -38,7 +38,7 @@ class DishesController < ApplicationController
   # DESTROY ----------
   def destroy
     Dish.destroy params[:id]
-
+     redirect_to dishes_path #index
   end
 
   #-----

@@ -11,7 +11,13 @@ Rails.application.routes.draw do
 
 
   #shortcut key to routes
-  resources :users, :dishes 
+  resources :users
+
+  #/posts/1/comments/4
+  resources :dishes do
+    resources :comments
+  end 
+
 
 
 end
