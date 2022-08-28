@@ -7,11 +7,16 @@
 </h3>
 
 <%# TO DO: edit show page - for the user only%>
+<%= link_to 'Edit Recipe', edit_dish_path(@dish) %>
+
+
 <%# TO DO: delete show page - for the user only%>
+<%= link_to 'Remove Recipe', dish_path(@dish), method: 'delete' %>
 
 <%#Link to user profile %>
 <div class = "profile">
-    by <%= link_to @dish.user.name, user_path(@dish.user.id) %>
+    Recipe shared by <%= link_to @dish.user.name, user_path(@dish.user.id) %>
+    
     <%#TO DO: show user's picture %>
 
 </div>

@@ -1,0 +1,49 @@
+
+
+<%= form_with model: @dish, local:true do |f| %>
+
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label :servings %>
+    <br>
+    <%= f.number_field :servings, in: 1..10 %>
+    <br><br>
+
+    <%= f.label :cooking_time %>
+    <br>
+    <%= f.text_field :cooking_time, placeholder: 'e.g. 1 hour 15 mins' %>
+    <br><br>
+
+    <%= f.label :ingredients %>
+    <br>
+    <%= f.text_area :ingredients, placeholder: 'list each item and enter!' %>
+    <br><br>
+
+    <%= f.label :methods %>
+    <br>
+    <%= f.text_area :methods,  placeholder: 'list each step and enter!' %>
+    <br><br>
+
+    <%= f.label :image, 'Image URL' ,placeholder: 'Insert URL here' %>
+    <br>
+    <%= f.text_field :image%>
+    <br><br>
+
+
+    <%= f.label :usert_id, 'User' %>
+    
+    <%= f.collection_select :user_id, User.all, :id, :name, include_blank: true %>
+    <%#                                              ^<option value="5">Lee Kranser</option>%>
+
+    <br><br>
+
+    <br>
+    <br>
+
+    <%= f.submit %>
+
+
+<% end %>
