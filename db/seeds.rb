@@ -153,6 +153,7 @@ u1.dishes << d1
 u2.dishes << d2
 u4.dishes << d3
 u4.dishes << d4
+u3.dishes << d5
 
 puts "Testing user -< dishes associations:"
 puts " • the dishes '#{Dish.first.name}' is by #{Dish.first.user.name}"
@@ -207,4 +208,3 @@ puts "Category '#{cat1.name}' has dishes #{cat1.dishes.pluck(:name).join(', ')}"
 puts "Dish '#{d5.name}' is under following category of #{d5.categories.pluck(:name).join(', ')} "
 
 #---------------------------
-

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bonappetit</title>
+    <title>Bon appetit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+    <nav>
+      <h1>Bon Appétit</h1>
+      <br>
+      <%= link_to 'Home', root_path %>
+      <br>
+    </nav>
+
+
+
 
   <body>
     <%= yield %>

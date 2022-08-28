@@ -1,2 +1,21 @@
-<h1>Dishes#index</h1>
-<p>Find me in app/views/dishes/index.html.erb</p>
+
+
+<h3> Trending Recipes </h3>
+<p> Try some heartwarming, inspiring recipes!  </p>
+
+
+ <!-- new form - to post a recipe -->
+
+
+ <!-- list of dishes z-->
+ <!-- TO DO!!!: clickable thumnail to show page -->
+
+<ul>
+    <% @dishes.each do |dish| %>
+    <li>
+        <%= link_to dish.name, dish_path(dish.id) %>
+    </li>
+    <% end%>
+
+</ul>
+

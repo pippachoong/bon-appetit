@@ -1,2 +1,57 @@
-<h1>Dishes#show</h1>
-<p>Find me in app/views/dishes/show.html.erb</p>
+
+
+
+<h3>
+<em><%= @dish.name %> </em>
+
+</h3>
+
+<%# TO DO: edit show page - for the user only%>
+<%# TO DO: delete show page - for the user only%>
+
+<%#Link to user profile %>
+<div class = "profile">
+    by <%= link_to @dish.user.name, user_path(@dish.user.id) %>
+    <%#TO DO: show user's picture %>
+
+</div>
+   
+
+
+<div class="recipe">
+    <p>
+    <%= image_tag @dish.image, alt:@dish_name, class:'artwork' %>
+    </p>
+    
+    <p>
+    Name: 
+    <%= @dish.name %>
+    </p>
+    
+    <p>
+    Servings: 
+    <%= @dish.servings %>
+    </p>
+    
+    <p>
+    Cooking duration: 
+    <%= @dish.cooking_time %>
+    </p>
+    
+    <p>
+    Ingredients: 
+    <%= @dish.ingredients %>
+    </p>
+    
+    <p>
+    Method: 
+    <%= @dish.methods %>
+    </p>
+
+
+</div>
+
+
+
+
+
