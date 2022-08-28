@@ -8,7 +8,6 @@ class User < ApplicationRecord
 
     has_many :dishes
 
-    has_many :comments, dependent: :destroy
-                        #^ if i delete dish, delete all comments
+    has_many :comments
     
 end
