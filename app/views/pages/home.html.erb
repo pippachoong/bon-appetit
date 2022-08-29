@@ -9,3 +9,75 @@ Cesar Chavez
 </p>
 
  <%= link_to 'All Dishes', dishes_path %>
+
+
+<div>
+    <% @categories.all.each do |category| %>
+        <div class="category">
+            <h3>
+                <%= link_to category_path(category.id) do %>
+                    <%= category.name %>
+                <% end %> 
+            </h3>
+            
+            <div class="category-images">
+                <% category.dishes.each do |dish|%>
+                    <%= link_to dish_path(dish.id) do %>
+                        <%= image_tag dish.image, class: "dish_thumbnail" %>
+                    <% end %> 
+                <% end %> 
+            </div> 
+        </div> 
+        
+
+    <% end %>
+
+</div>
+
+<!--
+categories = [
+    🐺_category, 🐤_category, 🐣_category
+]
+🐺_category = {
+    name: 🐺
+    dishes: [
+        {
+            name: "piggy banana",
+            id: 787,
+            image: /image/chiuck,
+            user: {
+                name: "bob",
+                image: /bobby,
+                id: 65
+            },
+
+        },
+        {
+            name: "piggy peach",
+            image: /image/chiuck
+        },
+        {
+            name: "piggy yuzu",
+            image: /image/chiuck
+        },
+    ]
+}
+
+🐤_category = {
+    name: 🐺
+    dishes: [
+        {
+            name: "chicken banana",
+            image: /image/chiuck
+        },
+        {
+            name: "chicken peach",
+            image: /image/chiuck
+        },
+        {
+            name: "chicken yuzu",
+            image: /image/chiuck
+        },
+    ]
+}
+-->

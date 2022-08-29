@@ -9,7 +9,7 @@ class SessionController < ApplicationController
     if user.present? && user.authenticate( params[:password])
 
     session[:user_id] = user.id 
-    redirect_to root_path #back to /
+    redirect_to categories_path #back to /
 
     else
 

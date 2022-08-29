@@ -40,23 +40,3 @@
 
 </ul>
 
-    <!--
-        TODO
-        get @categories.all
-        for each categories, create a category div
-        for each category div, create a child div for each dish in category
-    -->
-
-<div>
-    <% @categories.all[-4..-1].each do |category| %>
-        <div>
-            <%= link_to category_path(category.id) do %>
-                
-                <%= category.name %>
-            <br>
-            <% end %>
-        
-        </div> 
-    <% end %>
-
-</div>
