@@ -3,7 +3,6 @@
 
 <h3>
 <em><%= @dish.name %> </em>
-
 </h3>
 
 <%# TO DO: edit show page - for the user only%>
@@ -58,6 +57,11 @@
 
 
 </div>
+
+ <% @dish.categories.each do |cat| %>
+        <%= cat.name %>
+        <br>
+    <% end  %>
 
 <div> 
   <div>

@@ -10,7 +10,14 @@ class DishesController < ApplicationController
   end
 
   def create
-    Dish.create! dish_params
+    #TODO: check for validation errors
+    @dish = Dish.new dish_params
+    @dish.user_id = @current_user.id
+    @dish.save
+    # look up the categories selected in form checkboxes and associate them with this new dish
+    # @dish.categories only takes in object and cannot take in ids. So .find will convert into objects for us
+    @dish.categories << Category.find(params[:category_ids])
+    #                     arguments of categories objects^^
     redirect_to dishes_path
   end
 
@@ -77,7 +84,7 @@ class DishesController < ApplicationController
 
   #strong params - used to increate security of data sent through forms
   def dish_params
-    params.require(:dish).permit(:name,:image, :servings,:cooking_time,:ingredients, :methods, :user_id)
+    params.require(:dish).permit(:name,:image, :servings,:cooking_time,:ingredients, :methods)
   end
 
 end

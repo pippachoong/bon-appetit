@@ -2,8 +2,17 @@
 
 <%= form_with model: @dish, local:true do |f| %>
 
-  
-
+    <!--Becausese categories are not within the dish model, run loop like this-->
+    Select the relevant categories: 
+    <br>
+    <% Category.all.each do |cat| %>
+        <%= check_box_tag 'category_ids[]', cat.id %>
+        <!--check_cox_tag without 'f.' in front as it's not from dish model-->
+        <!--tells code to provide ids in array within a param, this can take many categories-->
+        <%= cat.name %>
+        <br>
+    <% end  %>
+    <br>
     <%= f.label :name %>
     <br>
     <%= f.text_field :name %>
@@ -35,12 +44,7 @@
     <br><br>
 
 
-    <%= f.label :user_id, 'User' %>
     
-    <%= f.collection_select :user_id, User.all, :id, :name, include_blank: true %>
-    <%#                                              ^<option value="5">Lee Kranser</option>%>
-
-    <br><br>
 
     <br>
     <br>
