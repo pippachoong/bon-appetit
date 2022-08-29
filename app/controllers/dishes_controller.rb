@@ -26,9 +26,12 @@ class DishesController < ApplicationController
     @dish_comments = Comment.where(dish_id: params[:id])
     # [comment1, comment2]
     # commment1 = {
-    #   review: "chicken",
+    #   review: "delicious",
+    #   user: "Mike"
     #   dish_id: "91"
     # }
+  #  raise 'hell'
+    
   end
 
   # UPDATE ----------

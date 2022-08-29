@@ -4,5 +4,6 @@ class Comment < ApplicationRecord
     
     validates :review, presence: true
 
+    belongs_to :user, optional: true
 
 end

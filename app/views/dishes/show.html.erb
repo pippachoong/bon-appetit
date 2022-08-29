@@ -61,22 +61,32 @@
 
 <div> 
   <div>
+    
     <p>Comments</p>
     <%= form_with model: @comment, local: true do |f| %>
-      <div>
-        <%= f.label 'New comment' %>
-        <%= f.text_area :review %>
-      </div>
-      <%= f.hidden_field :dish_id, value: @dish.id %>
-      <%= f.submit 'Submit' %>
+        <div>
+            <%= f.label 'New comment' %>
+            <%= f.text_area :review %>
+        </div>
+        <%= f.hidden_field :dish_id, value: @dish.id %>
+        <% if @current_user != nil %>
+        <%= f.hidden_field :user_id, value: @current_user.id %>
+        <% end %>
+        <%= f.submit 'Submit' %>
     <% end %>
   </div>
 
   <ul>
     <%  @dish_comments.each do |comment| %>
-    <li>
-     <%= comment[:review]%>
-    </li>
-    <%  end %>
+     <% if comment.user_id == nil  %>
+        <li>
+            Anonymous : <%= comment[:review]%>
+            </li>
+         <% else %>
+        <li>
+            <%=comment.user.name%>: <%= comment[:review]%>
+        </li>
+        <%  end %>
+    <% end %>
   </ul>
 </div>
