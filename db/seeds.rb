@@ -5,10 +5,30 @@ print  "creating users..."
 #make sure that's noting in the table so there's no doubling up
 User.destroy_all
 
-u1 = User.create! email:'jamie@gmail.com', name: 'Jamie', password: 'chicken'
-u2 = User.create! email:'nigella@gmail.com', name: 'Nigella',password: 'chicken'
-u3 = User.create! email:'saltbae@gmail.com', name: 'SaltBae',password: 'chicken'
-u4 = User.create! email:'gordon@gmail.com', name: 'Gordon',password: 'chicken'
+u1 = User.create!( 
+    email:'jamie@gmail.com', 
+    name: 'Jamie', 
+    password: 'chicken',
+    image:'https://thehappyfoodie.co.uk/wp-content/uploads/2021/05/jamie-oliver-headshot-close.jpg'
+)
+u2 = User.create!( 
+    email:'nigella@gmail.com', 
+    name: 'Nigella',
+    password: 'chicken',
+    image:'https://pbs.twimg.com/profile_images/1493693969825423365/pqVtK9q0_400x400.jpg'
+)
+u3 = User.create!( 
+    email:'saltbae@gmail.com', 
+    name: 'SaltBae',
+    password: 'chicken',
+    image:'https://marketresearchtelecast.com/wp-content/uploads/2021/11/JBSWJCCM2NF4LN7FZVCEK3HJV4.jpg'
+)
+u4 = User.create!( 
+    email:'gordon@gmail.com', 
+    name: 'Gordon',
+    password: 'chicken',
+    image: 'https://www.hollywoodreporter.com/wp-content/uploads/2021/08/Gordon-Ramsay-H-2021x.jpg'
+)
 
 puts "created #{User.count} users."
 

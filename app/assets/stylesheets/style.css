@@ -14,3 +14,8 @@ ul{
 .artwork{
     width: 40%;
 }
+
+.user-thumbnail{
+    width:5%;
+    border-radius:50%;
+}
