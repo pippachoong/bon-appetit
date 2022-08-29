@@ -10,15 +10,23 @@ class DishesController < ApplicationController
   end
 
   def create
-    #TODO: check for validation errors
     @dish = Dish.new dish_params
     @dish.user_id = @current_user.id
-    @dish.save
+    @dish.save #this is actually the create, the DB insert
+
+
     # look up the categories selected in form checkboxes and associate them with this new dish
     # @dish.categories only takes in object and cannot take in ids. So .find will convert into objects for us
     @dish.categories << Category.find(params[:category_ids])
     #                     arguments of categories objects^^
-    redirect_to dishes_path
+
+    # check for validation errors
+    if @dish.persisted?
+      redirect_to dishes_path
+    else 
+      render :new 
+    end
+
   end
 
   # READ ----------
