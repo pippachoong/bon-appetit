@@ -22,7 +22,13 @@ class DishesController < ApplicationController
 
   def show
     @dish =  Dish.find params[:id]
-
+    @comment  = Comment.new
+    @dish_comments = Comment.where(dish_id: params[:id])
+    # [comment1, comment2]
+    # commment1 = {
+    #   review: "chicken",
+    #   dish_id: "91"
+    # }
   end
 
   # UPDATE ----------

@@ -1,18 +1,22 @@
 class CommentsController < ApplicationController
-  
+    
     def create
-        @dish = Dish.find(params[:dish_id])
-        @comment = @dish.comments.new comment_params
+        @dish =  Dish.find params[:comment][:dish_id]
+        Comment.create! comments_params
+       redirect_to dish_path(@dish) #at the same dish show page
 
-        respond_to do |format|
-            if @comment.save
-                format.html { redirect_to @dish, notice: 'Comment was successfully created.' } # changed the redirect to @dish
-            end
-        end
+    end
+
+    def delete
+        # Comments.destroy params[:id]
+        # redirect_to dish_path(@dish) #at the same dish show page
+
     end
 
     private
-    def comment_params
-        params.require(:comment).permit(:review)
+
+    def comments_params
+        params.require(:comment).permit(:dish_id, :review)
     end
+
 end

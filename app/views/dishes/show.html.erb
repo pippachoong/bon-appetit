@@ -62,13 +62,21 @@
 <div> 
   <div>
     <p>Comments</p>
-    <%= form_with(model: [@dish, @dish.comments.build]) do |f| %>
+    <%= form_with model: @comment, local: true do |f| %>
       <div>
         <%= f.label 'New comment' %>
         <%= f.text_area :review %>
       </div>
+      <%= f.hidden_field :dish_id, value: @dish.id %>
       <%= f.submit 'Submit' %>
     <% end %>
   </div>
-    <%= render @dish.comments %>
+
+  <ul>
+    <%  @dish_comments.each do |comment| %>
+    <li>
+     <%= comment[:review]%>
+    </li>
+    <%  end %>
+  </ul>
 </div>

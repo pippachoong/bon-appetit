@@ -186,6 +186,8 @@ puts "Dish '#{d4.name}' has the following reviews #{d4.comments.pluck(:review).j
 
 print "creating category"
 
+Category.destroy_all
+
 cat1 = Category.create! name: 'Chicken'
 cat2 = Category.create! name: 'Beef'
 cat3 = Category.create! name: 'Fish'
@@ -206,5 +208,6 @@ d5.categories << cat2 << cat5
 
 puts "Category '#{cat1.name}' has dishes #{cat1.dishes.pluck(:name).join(', ')}" 
 puts "Dish '#{d5.name}' is under following category of #{d5.categories.pluck(:name).join(', ')} "
+
 
 #---------------------------

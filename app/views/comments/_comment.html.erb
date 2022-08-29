@@ -1,9 +1,1 @@
 
-    <!-- need to wrap the comment partial within an unless condition only to show saved comments-->
-<% unless !comment.persisted? %>
-    <div>
-        <div>
-            <%= comment.review %>
-        </div>
-    </div>
-<% end %>

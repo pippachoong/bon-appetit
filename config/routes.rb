@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   resources :users
 
   #/posts/1/comments/4
-  resources :dishes do
-    resources :comments
-  end 
+  resources :dishes 
+  
+  resources :comments
 
 
 
