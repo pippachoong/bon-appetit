@@ -24,6 +24,7 @@ class DishesController < ApplicationController
   # READ ----------
   def index
     @dishes = Dish.all
+    @categories = Category.all
 
   end
 

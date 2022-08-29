@@ -8,19 +8,33 @@
  <%= link_to 'Publish Recipe', new_dish_path %>
 
 
- <!-- list of dishes z-->
- <!-- TO DO!!!: clickable thumnail to show page -->
+ <!-- list of dishes by categories -->
+
 
 <ul>
-    <% @dishes.each do |dish| %>
-    <li>
-        <%= link_to dish_path(dish.id) do %>
-        <%= image_tag dish.image, class: "dish_thumbnail" %>
-        <br>
-        <% end%>
-        <%= dish.name %>
-    </li> 
-    <% end%>
+    <!--
+    @dishes.sort is sorting by the dish random id/string and it doesnt work by getting the latest 4 dishes
+    @dishes.all means getting all dishes in the list and retrieving the last four dishes
+    [
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508,
+        <Dish:0x000000015c2b6508
+    ]
+    -->
+    <% @dishes.all[-4..-1].each do |dish| %>
+        <li>
+            <%= link_to dish_path(dish.id) do %>
+                <%= image_tag dish.image, class: "dish_thumbnail" %>
+            <br>
+            <% end %>
+            <%= dish.name %>
+        </li> 
+    <% end %>
 
 </ul>
-
