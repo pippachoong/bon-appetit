@@ -39,7 +39,7 @@ class DishesController < ApplicationController
     #   user: "Mike"
     #   dish_id: "91"
     # }
-  #  raise 'hell'
+  
     
   end
 

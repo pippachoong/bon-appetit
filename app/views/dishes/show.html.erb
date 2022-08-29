@@ -82,6 +82,7 @@
 
   <ul>
     <%  @dish_comments.each do |comment| %>
+        <em>Last updated <%= time_ago_in_words(comment.updated_at) %> ago</em>
      <% if comment.user_id == nil  %>
         <li>
             Anonymous : <%= comment[:review]%>
@@ -94,3 +95,27 @@
     <% end %>
   </ul>
 </div>
+
+
+<!--
+Comments = [Comment 1, Comment 2,...]
+
+Comment = {
+    id
+    review: ""
+    dish :{
+        stuff
+    }
+    user:{
+        id
+        name
+        image
+        password
+    }
+
+}
+
+
+
+}
+-->
