@@ -1,9 +1,9 @@
 <h3> Recipebook <%= @recipebook.name %></h3>
 
 <p>
-    <em>
+<em>
     Last updated <%= time_ago_in_words(@recipebook.updated_at) %> ago
-  </em>
+    </em>
 
 </p>
 
@@ -17,26 +17,35 @@
     <%= image_tag @recipebook.image, alt: @recipebook.name , class:"recipebook_thumbnail"%>
 <% end %>
   
-<p>
-    Here are your collection of dishes 🍽
-</p>
 
 <!--recipebooks has many recipe books
     need to loop through recipebooks to get each dishes
 -->
-<div>
-    <% @current_user.recipebooks.each do |book| %>
-        <h2><%= book.name  %> </h2>
-            <% book.dishes.each do |dish| %>
-                <%= link_to dish_path(dish.id) do %>
-                <%= image_tag dish.image, class: "dish_thumbnail" %>
-        
-            <% end %> 
-        <% end %>
-    <% end %> 
-</div> 
+<ul>
+    <div>
+        <li>
+            <% @recipebook.dishes.each do |dish|%>
+                <div><%= link_to dish_path(dish.id) do %>
+                    <%= image_tag dish.image, class:"recipebook_thumbnail"%>
+                    <% end %>
+                <div> <%= dish.name %></div>
+                </div>
+            <% end %>
+        </li>
+    </div> 
+<ul>
+<!--
+recipebook={
+    name: 
+    image:
+    user_id={}
+    dishes = [
+        {dish}{dish}{dish}
+    ]
 
+}
 
+-->
 
 
  
