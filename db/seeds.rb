@@ -231,3 +231,38 @@ puts "Dish '#{d5.name}' is under following category of #{d5.categories.pluck(:na
 
 
 #---------------------------
+print "creating recipebooks"
+
+Recipebook.destroy_all
+
+rb1 = Recipebook.create!(
+     name:'Weekend Meals',
+     image:'https://img.etimg.com/photo/msid-67268378,quality-100/weekend-gettyimages-657754434.jpg',
+)
+rb2 = Recipebook.create!(
+     name:'Saturday Dinner Ideas',
+     image:'https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/07/593809-1-eng-GB_first-class-beef-curry-768x939.jpg',
+)
+rb3 = Recipebook.create!(
+     name:'Lunch Prep',
+     image:'https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/09/deep-pan-pizza-768x960.jpg',
+)
+rb4 = Recipebook.create!(
+     name:'Brunch Ideas',
+     image:'https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/09/519502-1-eng-GB_beer-battered-fish-with-mushy-peas-tartare-saice-and-triple-cooked-chips-768x1023.jpg',
+)
+
+puts "created #{Recipebook.count} recipebooks"
+
+#---------------------------
+
+#create dishes >-----< recipebooks associations
+
+rb1.dishes << d1 << d5 << d3
+rb2.dishes << d2 << d3
+rb3.dishes << d5 << d4
+rb4.dishes << d1 << d2 << d5 
+
+
+puts "Recipe books '#{rb1.name}' has the dishes #{rb1.dishes.pluck(:name).join(', ')}"
+puts "Song '#{d5.name}' is on recipebooks #{d5.recipebooks.pluck(:name).join(', ')}"
