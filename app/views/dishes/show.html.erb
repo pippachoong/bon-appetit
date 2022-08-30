@@ -57,13 +57,21 @@
 
 
 </div>
-
- <% @dish.categories.each do |cat| %>
-        <%= cat.name %>
-        <br>
-    <% end  %>
-
+    <p> Categories:
+        <ul>
+            <% @dish.categories.each do |category| %>
+                <li>
+                    <%= link_to category_path(category.id) do %>
+                    <%= category.name %>
+                    <br>
+                    <% end  %>
+                </li>
+            <% end  %>
+        </ul>
+    </p>
 <div> 
+
+<!--Comments section -->
   <div>
     
     <p>Comments</p>
@@ -80,6 +88,7 @@
     <% end %>
   </div>
 
+ 
   <ul>
     <%  @dish_comments.each do |comment| %>
         <div>
@@ -118,7 +127,9 @@ Comment = {
     id
     review: ""
     dish :{
-        stuff
+        name:
+        servings:
+        category:{}
     }
     user:{
         id

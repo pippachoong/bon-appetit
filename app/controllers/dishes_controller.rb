@@ -47,7 +47,7 @@ class DishesController < ApplicationController
     #   user: "Mike"
     #   dish_id: "91"
     # }
-  
+    
     
   end
 
