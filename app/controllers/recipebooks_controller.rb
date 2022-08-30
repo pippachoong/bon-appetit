@@ -2,7 +2,7 @@ class RecipebooksController < ApplicationController
 
   before_action :check_if_logged_in, except: [:index, :show] 
 
-  # a new seperate page for recipebook dropdown
+  # a new seperate page for recipebook dropdown -----------------
   def add_dish
     
     @dish = Dish.find params[:dish_id]
@@ -16,7 +16,8 @@ class RecipebooksController < ApplicationController
 
     redirect_to dish_path(@dish.id)
   end
-
+  #---------------------------------------------
+  
   def new
     @recipebook = Recipebook.new
   end
@@ -92,7 +93,7 @@ class RecipebooksController < ApplicationController
 
   #strong params - used to increate security of data sent through forms
   def recipebook_params
-    params.require(:recipebook).permit(:name,:image, :user_id)
+    params.require(:recipebook).permit(:name,:image, :user_id, :dish_id)
   end
 
 end
