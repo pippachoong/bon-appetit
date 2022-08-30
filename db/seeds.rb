@@ -1,6 +1,6 @@
 ####### Users Seed --------------------------
 
-print  "creating users..."
+puts  "creating users..."
 
 #make sure that's noting in the table so there's no doubling up
 User.destroy_all
@@ -35,7 +35,7 @@ puts "created #{User.count} users."
 
 ######## Dishes Seed -------------------
 
-print "creating dishes"
+puts "creating dishes"
 
 Dish.destroy_all
 
@@ -168,7 +168,7 @@ puts "Done! Create #{Dish.count} dishes:"
 puts Dish.pluck(:name).join(',')
 
 #######----------------------------
-# Create one to many associations
+# Create one to many associations - dishes and user
 u1.dishes << d1
 u2.dishes << d2
 u4.dishes << d3
@@ -180,7 +180,7 @@ puts " • the dishes '#{Dish.first.name}' is by #{Dish.first.user.name}"
 puts " • the user #{User.last.name} has the dishes: #{User.last.dishes.pluck(:name).join(', ')}"
 
 #---------------------------
-print "creating comment "
+puts "creating comment "
 
 Comment.destroy_all
 
@@ -204,7 +204,7 @@ puts "Dish '#{d4.name}' has the following reviews #{d4.comments.pluck(:review).j
 
 #-------------------------------------
 
-print "creating category"
+puts "creating category"
 
 Category.destroy_all
 
@@ -231,7 +231,7 @@ puts "Dish '#{d5.name}' is under following category of #{d5.categories.pluck(:na
 
 
 #---------------------------
-print "creating recipebooks"
+puts "creating recipebooks"
 
 Recipebook.destroy_all
 
@@ -266,3 +266,15 @@ rb4.dishes << d1 << d2 << d5
 
 puts "Recipe books '#{rb1.name}' has the dishes #{rb1.dishes.pluck(:name).join(', ')}"
 puts "Song '#{d5.name}' is on recipebooks #{d5.recipebooks.pluck(:name).join(', ')}"
+
+#--------------------------------------
+# Create one to many associations - recipebooks and users
+
+puts "created #{User.count} users."
+
+u1.recipebooks << rb1 << rb4
+u3.recipebooks << rb2
+u2.recipebooks << rb3
+
+puts "user #{u1.name} has recipe books: #{u1.recipebooks.pluck(:name).join(', ')} "
+puts "Recipe books '#{rb4.name}' belongs to #{rb4.user.name}"

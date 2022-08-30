@@ -11,6 +11,8 @@ class User < ApplicationRecord
     has_many :comments
 
     has_many :categories, through: 'dishes'
+
+    has_many :recipebooks
     
 
 end

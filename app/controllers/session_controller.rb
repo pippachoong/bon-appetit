@@ -22,7 +22,7 @@ class SessionController < ApplicationController
 
      #logging user out
     session[:user_id] = nil 
-    redirect_to login_path #back to the login page
+    redirect_to dishes_path #back to dishes index
 
   end
 end

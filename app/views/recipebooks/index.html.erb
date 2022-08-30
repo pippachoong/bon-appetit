@@ -1,0 +1,20 @@
+
+<h3>All recipebooks</h3>
+<h5>Find some inspirations from others! </h5>
+
+
+
+<p>
+Currently: <%= pluralize(@recipebooks.length, 'recipe books') %>
+</p>
+
+<ul>
+<% @recipebooks.each do |recipebook| %>
+
+    <li>
+        <%= link_to recipebook.name, recipebook_path(recipebook) %>
+        (<%= link_to recipebook.user.name, user_path(recipebook.user) %>)
+    </li>
+    <% end %>
+
+</ul>

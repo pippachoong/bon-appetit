@@ -55,7 +55,7 @@ class DishesController < ApplicationController
   def edit
     @dish =  Dish.find params[:id]
 
-    # check if @current_user.owns (@mixtape)
+    # check if @current_user.owns (@dish)
     if @dish.user_id != @current_user.id
       redirect_to login_path
     end
@@ -67,7 +67,7 @@ class DishesController < ApplicationController
     @dish = Dish.find params[:id]
 
     redirect_to dish_path(dish.id)
-    # check if @current_user.owns (@mixtape)
+    # check if @current_user.owns (@dish)
     if @dish.user_id != @current_user.id
       redirect_to login_path
       return #this is to stop code from running the next step

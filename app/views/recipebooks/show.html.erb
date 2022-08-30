@@ -1,0 +1,26 @@
+<h3> Recipebook pinned by <%= @recipebook.name %></h3>
+
+<p>
+    <em>
+    Last updated <%= time_ago_in_words(@recipebook.updated_at) %> ago
+  </em>
+
+</p>
+
+  
+
+
+<% if @current_user.present? && @current_user.id == @recipebook.user_id %>
+    <%= link_to 'Edit', edit_recipebook_path(@recipebook) %>
+<% end %>
+
+
+
+<p>
+    Song list here!
+</p>
+<!-- if image is not there, still run-->
+<!-- safe is from breaking-->
+<% if @recipebook.image.present? %>
+    <%= image_tag @recipebook.image, alt: @recipebook.name %>
+<% end %>

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  
-  
-  
+
   root to: 'pages#home'
 
   #Login/Logout (session) routes
@@ -20,5 +18,7 @@ Rails.application.routes.draw do
   resources :comments
 
   resources :categories
+
+  resources :recipebooks
 
 end
