@@ -17,8 +17,12 @@
 
 <%#Link to user profile %>
 <div class = "profile">
-    Recipe shared by <%= link_to @dish.user.name, user_path(@dish.user.id) %>
-
+    Recipe shared by 
+    <br>
+    <div>
+    <%= image_tag @dish.user.image , class: "user-thumbnail"%>
+    <%= link_to @dish.user.name, user_path(@dish.user.id) %>
+    </div>
     <%#TO DO: show user's picture %>
 </div>
 <br><br>
@@ -37,6 +41,7 @@
         -->
         <!-- 
         We can also use the 'form_with' helper for generic forms that do NOT work with a model; to do this we use -->
+        <%= flash[:error] %>
 
         <%= form_with url: recipebook_add_dish_path(@dish.id), local: true do |f| %>
 

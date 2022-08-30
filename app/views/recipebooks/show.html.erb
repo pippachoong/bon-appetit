@@ -9,6 +9,8 @@
 
 <% if @current_user.present? && @current_user.id == @recipebook.user_id %>
     <%= link_to 'Edit', edit_recipebook_path(@recipebook) %>
+    |
+    <%= link_to 'Delete', recipebook_path(@recipebook), method: 'delete' %>
 <% end %>
 <br>
 <!-- if image is not there, still run-->
@@ -21,19 +23,20 @@
 <!--recipebooks has many recipe books
     need to loop through recipebooks to get each dishes
 -->
-<ul>
-    <div>
-        <li>
-            <% @recipebook.dishes.each do |dish|%>
-                <div><%= link_to dish_path(dish.id) do %>
-                    <%= image_tag dish.image, class:"recipebook_thumbnail"%>
-                    <% end %>
-                <div> <%= dish.name %></div>
-                </div>
+
+<div class="all-dishes-in-recipebook">
+    <% @recipebook.dishes.each do |dish|%>
+        <div class="each-dish-in-recipebook">
+            <%= link_to dish_path(dish.id) do %>
+                <%= image_tag dish.image, class:"recipebook_thumbnail"%>
             <% end %>
-        </li>
-    </div> 
-<ul>
+            <h3> <%= dish.name %> </h3>
+            <!-- passsing recipebook id in order to find recipe book id-->
+            <%= link_to 'Remove', recipebook_remove_dish_path(dish_id: dish.id, recipebook_id: @recipebook.id), method: 'delete' %>
+        </div>
+    <% end %>
+</div> 
+
 <!--
 recipebook={
     name: 

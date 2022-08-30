@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   #                                                 (below add_dish)this is a new method
   post '/recipebooks/add/:dish_id' => 'recipebooks#add_dish', as: 'recipebook_add_dish'
 
+  delete '/recipebooks/:recipebook_id/remove/:dish_id' => 'recipebooks#remove_dish', as: 'recipebook_remove_dish'
+
   resources :recipebooks
 
 end

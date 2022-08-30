@@ -16,6 +16,19 @@ class RecipebooksController < ApplicationController
 
     redirect_to dish_path(@dish.id)
   end
+#-----------remove dish--------------
+  def remove_dish
+    
+    @dish = Dish.find params[:dish_id]
+    @recipebook = Recipebook.find params[:recipebook_id]
+
+    # validates if recipe book has dish, delete it
+    if @recipebook.dishes.include? @dish 
+      @recipebook.dishes.delete(@dish)
+    end
+
+    redirect_to recipebook_path(@recipebook.id)
+  end
   #---------------------------------------------
   
   def new

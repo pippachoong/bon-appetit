@@ -27,16 +27,19 @@
         <Dish:0x000000015c2b6508
     ]
     -->
-<ul>
-    <% @dishes.all[-4..-1].each do |dish| %>
-        <li>
-            <%= link_to dish_path(dish.id) do %>
-                <%= image_tag dish.image, class: "dish_thumbnail" %>
-            <br>
-            <% end %>
-            <%= dish.name %>
-        </li> 
-    <% end %>
+    <div>
 
-</ul>
+        <% @dishes.all[-4..-1].each do |dish| %>
+            
+            <div>
+                <%= link_to dish_path(dish.id) do %>
+                    <%= image_tag dish.image, class: "dish_thumbnail" %>
+                <br>
+                <% end %>
+                <%= dish.name %>
+            </div>
+           
+        <% end %>
+
+    </div>
 

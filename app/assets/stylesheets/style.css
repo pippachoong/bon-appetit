@@ -1,9 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+ /*change the CSS :visited pseudo class. */
+ a:visited { 
+ text-decoration: none; 
+ 
+}
+a{
+text-decoration: none;
+/* color: #ffffff */
+}
+
+/* mouse over link */
+a:hover {
+  color: #374452;
+}
+
+/* selected link */
+a:active {
+  color: #585d62;
+} 
 .field_with_errors input {
    border: 2px solid red;
 }
 
+/* nav{
+    background-color:#E5CD75;
+    
+} */
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  /* color: #ffffff */
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+}
+
+p{
+   font-family: 'Raleway', sans-serif;
+   /* color: #fce2d0; */
+}
+
 .dish_thumbnail{
-    width: 25%;
+    width: 20%;
+    /* border-radius: 30px ; */
 }
 
 ul{
@@ -13,6 +60,7 @@ ul{
 
 .artwork{
     width: 40%;
+    /* border-radius: 30px ; */
 }
 
 .user-thumbnail{
@@ -22,4 +70,21 @@ ul{
 
 .recipebook_thumbnail{
     width:20vw;
+    /* border-radius: 30px ; */
+}
+
+div{
+    border: 2px solid red;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.category_thumbnail {
+    width: 100%;
+}
+body{
+    width: 80%;
+    margin: 0 auto;
 }

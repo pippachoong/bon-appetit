@@ -20,12 +20,14 @@ Cesar Chavez
                 <% end %> 
             </h3>
             
-            <div class="category-images">
-                <% category.dishes.each do |dish|%>
+            <div class="category-container">
+            <% category.dishes.each do |dish|%>
+                <div>
                     <%= link_to dish_path(dish.id) do %>
-                        <%= image_tag dish.image, class: "dish_thumbnail" %>
+                        <%= image_tag dish.image, class: "category_thumbnail" %>
                     <% end %> 
-                <% end %> 
+                </div> 
+            <% end %> 
             </div> 
         </div> 
         
