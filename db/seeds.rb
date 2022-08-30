@@ -265,7 +265,7 @@ rb4.dishes << d1 << d2 << d5
 
 
 puts "Recipe books '#{rb1.name}' has the dishes #{rb1.dishes.pluck(:name).join(', ')}"
-puts "Song '#{d5.name}' is on recipebooks #{d5.recipebooks.pluck(:name).join(', ')}"
+puts "Dish '#{d5.name}' is on recipebooks #{d5.recipebooks.pluck(:name).join(', ')}"
 
 #--------------------------------------
 # Create one to many associations - recipebooks and users

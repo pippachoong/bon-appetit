@@ -17,10 +17,10 @@
 
 
 <p>
-    Song list here!
+    Dish here!
 </p>
 <!-- if image is not there, still run-->
 <!-- safe is from breaking-->
 <% if @recipebook.image.present? %>
-    <%= image_tag @recipebook.image, alt: @recipebook.name %>
+    <%= image_tag @recipebook.image, alt: @recipebook.name , class:""%>
 <% end %>
