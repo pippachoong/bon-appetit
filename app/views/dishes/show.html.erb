@@ -33,7 +33,7 @@
         <!-- 
         We can also use the 'form_with' helper for generic forms that do NOT work with a model; to do this we use -->
 
-        <%= form_with url: login_path, local: true do |f| %>
+        <%= form_with url: recipebook_add_dish_path(@dish.id), local: true do |f| %>
 
             <%= collection_select :recipebook, :id, @current_user.recipebooks.order(:created_at), :id, :name %>
         <%= f.submit 'Save it' %>

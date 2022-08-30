@@ -1,6 +1,22 @@
 class RecipebooksController < ApplicationController
 
-  before_action :check_if_logged_in, except: [ :index, :show] 
+  before_action :check_if_logged_in, except: [:index, :show] 
+
+  # a new seperate page for recipebook dropdown
+  def add_dish
+    
+    @dish = Dish.find params[:dish_id]
+    @recipebook = Recipebook.find params[:recipebook][:id]
+
+    # rb1.dishes << d1
+    # only add the dish if it's not already there
+    unless @recipebook.dishes.include? @dish 
+      @recipebook.dishes << @dish
+    end
+
+    redirect_to dish_path(@dish.id)
+  end
+
   def new
     @recipebook = Recipebook.new
   end
