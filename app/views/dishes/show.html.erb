@@ -39,10 +39,23 @@
             <br>
         <% end %>
         -->
+        <!-- need 'if condition' to let the code knows how we want the hash,flash[] temporary prints out the string . need to create <div> to customise this temporary text
+         -->
+        <% if flash[:error] %>
+            <div class="error-message">
+                <%= flash[:error] %>
+                <br>
+            </div>
+        <% end %>
+
+        <% if flash[:success] %>
+            <div class="success-message">
+                <%= flash[:success] %>
+                <br>
+            </div>
+        <% end %>
         <!-- 
         We can also use the 'form_with' helper for generic forms that do NOT work with a model; to do this we use -->
-        <%= flash[:error] %>
-
         <%= form_with url: recipebook_add_dish_path(@dish.id), local: true do |f| %>
 
             <%= collection_select :recipebook, :id, @current_user.recipebooks.order(:created_at), :id, :name %>

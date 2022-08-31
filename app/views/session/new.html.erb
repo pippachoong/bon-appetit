@@ -4,12 +4,9 @@
 <p>Enter your login details</p>
 
 <% if flash[:error] %>
-<br>
-<strong>
+    <div class="error-message">
     <%= flash[:error] %>
-</strong>
-<br>
-<br>
+    </div>
 
 <% end%>
 

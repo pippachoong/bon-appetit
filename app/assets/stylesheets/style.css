@@ -6,32 +6,47 @@
  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
  /*change the CSS :visited pseudo class. */
+
+
+.error-message{
+    font-family: 'Raleway', sans-serif;
+    color: brown;
+}
+
+.success-message{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(0, 99, 28);
+}
+
+.field_with_errors input {
+   border: 2px solid red;
+}
+
  a:visited { 
  text-decoration: none; 
  
 }
 a{
 text-decoration: none;
-/* color: #ffffff */
+color: #000000
 }
 
 /* mouse over link */
 a:hover {
   color: #374452;
+  font-weight: bold;
 }
 
 /* selected link */
 a:active {
   color: #585d62;
 } 
-.field_with_errors input {
-   border: 2px solid red;
-}
 
-/* nav{
+
+nav{
     background-color:#E5CD75;
     
-} */
+}
 
 body{
   font-family: 'Josefin Sans', sans-serif;
@@ -45,12 +60,12 @@ h1{
 
 p{
    font-family: 'Raleway', sans-serif;
-   /* color: #fce2d0; */
+   color: #fce2d0;
 }
 
 .dish_thumbnail{
     width: 20%;
-    /* border-radius: 30px ; */
+    border-radius: 30px ;
 }
 
 ul{
@@ -60,7 +75,7 @@ ul{
 
 .artwork{
     width: 40%;
-    /* border-radius: 30px ; */
+    border-radius: 30px ;
 }
 
 .user-thumbnail{
@@ -70,7 +85,7 @@ ul{
 
 .recipebook_thumbnail{
     width:20vw;
-    /* border-radius: 30px ; */
+    border-radius: 30px ;
 }
 
 div{

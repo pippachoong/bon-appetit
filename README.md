@@ -6,7 +6,9 @@ TODO:
 - send error message 
 - Tidy recipe's paragraph
 - css 
-- add seed
+- add seed user profile
+- you may also like section in show page
+
 
 
 Nice to have:
@@ -15,6 +17,9 @@ Nice to have:
 - link to youtube to website
 - search bar 
 - ~~profile icon next to user in recipe book /dish show page~~
+- more nested categories - vegan, gluten free, vegetarian, keto
+- more categories like baking,drinks etc. 
+
 
 <!-- 
 <div class="detail-information">

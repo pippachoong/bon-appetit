@@ -10,8 +10,11 @@ class RecipebooksController < ApplicationController
 
     # rb1.dishes << d1
     # only add the dish if it's not already there
-    unless @recipebook.dishes.include? @dish 
+    if @recipebook.dishes.include? @dish 
+      flash[:error] = 'Psst! You have already saved this dish to this recipe book'
+    else 
       @recipebook.dishes << @dish
+      flash[:success] = ' Added to to the recipe book!'
     end
 
     redirect_to dish_path(@dish.id)

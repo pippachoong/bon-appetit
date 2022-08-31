@@ -48,14 +48,6 @@ class DishesController < ApplicationController
     #   dish_id: "91"
     # }
     
-    def check_if_dish_existed
-        unless @dish.present? 
-            flash[:error] = 'You already have this recipe in the dish'
-            render :show
-        end #unless
-
-    end #check_if_dish_existed
-    
   end
 
   # UPDATE ----------
