@@ -25,6 +25,7 @@ Cesar Chavez
                 <div>
                     <%= link_to dish_path(dish.id) do %>
                         <%= image_tag dish.image, class: "category_thumbnail" %>
+                        <%= dish.name %>
                     <% end %> 
                 </div> 
             <% end %> 

@@ -33,12 +33,6 @@
     <p> Add this recipe to your recipe book!</p>
     </div>
     <% if @current_user.present?%> <!--check if user is logged in -->
-    <!--
-        <% @current_user.recipebooks.each do |book| %>
-            <%= book.name %>
-            <br>
-        <% end %>
-        -->
         <!-- need 'if condition' to let the code knows how we want the hash,flash[] temporary prints out the string . need to create <div> to customise this temporary text
          -->
         <% if flash[:error] %>
@@ -106,14 +100,14 @@
                     <%= link_to category_path(category.id) do %>
                     <%= category.name %>
                     <br>
-                    <% end  %>
+                    <% end %>
                 </li>
-            <% end  %>
+            <% end %>
         </ul>
     </p>
 <div> 
 
-<!--Comments section -->
+<!--Comments section ------------------------------------------------------>
   <div>
     
     <p>Comments</p>
@@ -130,6 +124,7 @@
     <% end %>
   </div>
 
+  
  
   <ul>
     <%  @dish_comments.each do |comment| %>
@@ -161,8 +156,32 @@
   </ul>
 </div>
 
+<!--categories has many dishes and vice versa. using .sample to randomly pick the categories from this dish 
+-->
+<div>
+    <div>
+        <p> You May Also Like: 
+            <ul>
+                <% @dish.categories.sample.dishes.each do |dish| %>
+                    <li>
+                        <div>
+                        <%= link_to dish_path(dish) do %>
+                        <%= image_tag dish.image, class: "dish_thumbnail", alt: dish.name %> 
+                        <%= dish.name %>
+                        </div>
+                        <br>
+                        <% end %>
+                    </li>
+                <% end %>
+            </ul>
+        </p>
+    </div> 
+</div>
 
-<!--
+
+
+
+<!--  comments model structure 
 Comments = [Comment 1, Comment 2,...]
 
 Comment = {
@@ -171,7 +190,7 @@ Comment = {
     dish :{
         name:
         servings:
-        category:{}
+        category:[]
     }
     user:{
         id
@@ -184,5 +203,11 @@ Comment = {
 
 
 
+}
+
+dish = {
+    name: superpie
+    image: /pie.jpg
+    categories: [chicken, beef, egg]
 }
 -->

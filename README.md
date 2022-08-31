@@ -3,11 +3,11 @@
 TODO:
 - ~~Delete meal from recipe book~~
 - ~~Prevent duplicate meals from being added to recipe book ~~
-- send error message 
+- ~~send error message ~~
 - Tidy recipe's paragraph
 - css 
 - add seed user profile
-- you may also like section in show page
+- ~~you may also like section in show page~~
 
 
 
