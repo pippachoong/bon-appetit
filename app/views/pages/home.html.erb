@@ -7,16 +7,16 @@
         <strong>Cesar Chavez</strong>
     </p>
     
-        <%= image_tag "quote photo.jpeg" , class:'cover-image'%>
+        <%= image_tag "quote photo.jpeg" , class:'quote-image'%>
     
 </div>
+<br>
 
-<div>
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/njCyoWFNybU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube-frame">
+    <p class="youtube-title"> Get Ready for Spring</p>
+    <iframe class="youtube" width="560" height="315" src="https://www.youtube-nocookie.com/embed/njCyoWFNybU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<%= link_to 'All Recipes', dishes_path %>
-<%= link_to 'Add Recipe', new_dish_path %>
 
 
 

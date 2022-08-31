@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     def check_if_logged_in
         
         unless @current_user.present? 
-            flash[:error] = 'You must be logged in to perform that action'
+            flash[:error] = 'uh-oh! You need to login first!'
             redirect_to login_path
         end #unless
 

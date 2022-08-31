@@ -9,7 +9,7 @@
     </div>
 
 <% end%>
-
+<br>
 <!-- 
 We can also use the 'form_with' helper for generic forms that do NOT work with a model; to do this we use 
 url: SOME_URL_HERE
@@ -29,7 +29,7 @@ model: @SOME_MODEL_HERE
 <%= f.password_field :password %>
 <br><br>
 
-<%= f.submit 'Login' %>
+<%= f.submit 'Login' , class:'button' %>
 
 <% end  %>
 

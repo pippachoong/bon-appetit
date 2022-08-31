@@ -1,10 +1,16 @@
-<h3> Recipebook <%= @recipebook.name %></h3>
+<div class="recipebook-container">
+    <h3 class="recipebook-name"> Recipebook <%= @recipebook.name %></h3>
+    <!-- if image is not there, still run-->
+    <!-- safe is from breaking-->
+    <% if @recipebook.image.present? %>
+        <p class="recipebook-cover-image"><%= cl_image_tag @recipebook.image, alt: @recipebook.name , class:"recipebook_thumbnail"%></p>
+    <% end %>
+</div> 
 
 <p>
 <em>
     Last updated <%= time_ago_in_words(@recipebook.updated_at) %> ago
     </em>
-    <%= image_tag "quote photo.jpeg" %>
 </p>
 
 <% if @current_user.present? && @current_user.id == @recipebook.user_id %>
@@ -13,12 +19,6 @@
     <%= link_to 'Delete', recipebook_path(@recipebook), method: 'delete' %>
 <% end %>
 <br>
-<!-- if image is not there, still run-->
-<!-- safe is from breaking-->
-<% if @recipebook.image.present? %>
-    <%= cl_image_tag @recipebook.image, alt: @recipebook.name , class:"recipebook_thumbnail"%>
-<% end %>
-  
 
 <!--recipebooks has many recipe books
     need to loop through recipebooks to get each dishes

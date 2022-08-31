@@ -9,7 +9,7 @@ TODO:
 - ~~profile icon next to user in recipe book /dish show page~~
 - ~~link to youtube to website~~
 - css 
-- add seed: user profile
+- add seed: all dishes and recipebooks
 
 
 
@@ -20,9 +20,3 @@ Nice to have:
 - more nested categories - vegan, gluten free, vegetarian, keto
 - more categories like baking,drinks etc. 
 
-
-<!-- 
-<div class="detail-information">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_0GWG0yCu-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p> Keeping up with T . M . L </p>
-    </div>  -->
