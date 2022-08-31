@@ -4,7 +4,7 @@
 <em>
     Last updated <%= time_ago_in_words(@recipebook.updated_at) %> ago
     </em>
-
+    <%= image_tag "quote photo.jpeg" %>
 </p>
 
 <% if @current_user.present? && @current_user.id == @recipebook.user_id %>

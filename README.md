@@ -5,11 +5,11 @@ TODO:
 - ~~Prevent duplicate meals from being added to recipe book ~~
 - ~~send error message ~~
 - ~~Tidy recipe's paragraph ~~
-- css 
-- add seed: user profile
 - ~~you may also like section in show page~~
 - ~~profile icon next to user in recipe book /dish show page~~
-- link to youtube to website
+- ~~link to youtube to website~~
+- css 
+- add seed: user profile
 
 
 

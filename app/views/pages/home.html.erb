@@ -1,12 +1,19 @@
 
 
 <h3> A place to share recipes </h3>
+<div>
+    <p>
+        “If you really want to make a friend, go to someone’s house and eat with him… The people who give you their food give you their heart.”
+        <strong>Cesar Chavez</strong>
+    </p>
+    <div class="cover-image">
+        <%= image_tag "quote photo.jpeg" %>
+    </div>
+</div>
 
-<p>
-“If you really want to make a friend, go to someone’s house and eat with him… The people who give you their food give you their heart.”
-
-Cesar Chavez
-</p>
+<div>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/njCyoWFNybU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <%= link_to 'All Recipes', dishes_path %>
 <%= link_to 'Add Recipe', new_dish_path %>
