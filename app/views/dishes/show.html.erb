@@ -2,7 +2,7 @@
 
 
 <h3>
-<em><%= @dish.name %> </em>
+    <%= @dish.name %> 
 </h3>
 
 <%# TO DO: edit show page - for the user only%>
@@ -66,30 +66,38 @@
     <%= image_tag @dish.image, alt:@dish_name, class:'artwork' %>
     </p>
     
+    <h5> Name: </h5>
     <p>
-    Name: 
     <%= @dish.name %>
     </p>
-    
+
+    <h5>Servings: </h5>
     <p>
-    Servings: 
     <%= @dish.servings %>
     </p>
     
+    <h5>Cooking duration: </h5>
     <p>
-    Cooking duration: 
     <%= @dish.cooking_time %>
     </p>
     
-    <p>
+    <h5>
     Ingredients: 
-    <%= @dish.ingredients %>
-    </p>
-    
-    <p>
-    Method: 
-    <%= @dish.methods %>
-    </p>
+    </h5>
+    <ul>
+        <% @dish.ingredients.split("\n").each do |paragraph| %>
+            <li>
+                <%= paragraph %>
+            </li>
+    <% end %>
+    </ul>
+
+    <h5>Method:</h5>
+    <% @dish.methods.split("\n").each do |paragraph| %>
+        <p>
+            <%= paragraph %>
+        </p>
+    <% end %>
 
 
 </div>

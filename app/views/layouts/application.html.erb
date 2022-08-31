@@ -27,7 +27,7 @@
 
       <div>
         <% if @current_user.present?%>
-          Welcome back, <%= @current_user.name %>!
+          Welcome back, <div class="user-login-name"><%= @current_user.name %>!</div>
           <br>
           <%= link_to 'Logout', login_path, method: 'delete' %>
 

@@ -139,7 +139,7 @@ d5 = Dish.create!(
      servings: 4, 
      cooking_time:'2 hours', 
     ingredients:'
-400 g stewing beef
+400 g stewing beef 
 4 cloves of garlic
 4 cm piece of ginger
 2 large onions
