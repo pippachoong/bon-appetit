@@ -39,6 +39,7 @@ class RecipebooksController < ApplicationController
   end
 
   def create
+    # raise 'hell' # so we can inspect params
 
     # prevent people from changing form data from the dev tools!
     # User @current user. id here to associate with a user - this assumes that the current action is locked down by 
@@ -47,8 +48,19 @@ class RecipebooksController < ApplicationController
       
     @recipebook = Recipebook.create recipebook_params
     @recipebook.user_id = @current_user.id 
+
+    # Check if a file was uploaded via the form, and if so,
+    # and then forward that file ID it gives us back, into the 
+    # mixtapes object
+    if params[:recipebook][:image].present?
+      # upload to Cloudinary and capture the response, which includes a new ID
+      response = Cloudinary::Uploader.upload params[:recipebook][:image]
+      @recipebook.image = response["public_id"]#view in iTerm/terminal
+    end # image upload
+
+
     @recipebook.save #this is actually the create, the DB insert
-    if recipebook.persisted?
+    if @recipebook.persisted?
       redirect_to recipebooks_path
     else 
       render :new 
@@ -102,6 +114,8 @@ class RecipebooksController < ApplicationController
   end
 
   def destroy
+    Recipebook.destroy params[:id]
+     redirect_to recipebooks_path #index
   end
 
   #----------

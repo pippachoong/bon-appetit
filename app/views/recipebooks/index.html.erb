@@ -8,25 +8,23 @@
 Current collections: <%= pluralize(@recipebooks.length, 'recipe books') %>
 </p>
 
-<ul>
-    <div>
+<div class='all-books'>
+    <ul>
         <% @recipebooks.each do |recipebook| %>
-    </div>
-    <div>
-        <li>
-            <div>
-                <%= link_to recipebook.name, recipebook_path(recipebook) %>
-                (<%= link_to recipebook.user.name, user_path(recipebook.user) %>)
-            </div>
-            <div>
-                <% recipebook.dishes.each do |dish| %>
+            <li>
+                <div class='a-book'>
+                    <h3>
+                        <%= link_to recipebook.name, recipebook_path(recipebook) %>
+                        (<%= link_to recipebook.user.name, user_path(recipebook.user) %>)
+                    </h3>
+                    <% recipebook.dishes.each do |dish| %>
                         <%= link_to dish_path(dish.id) do %>
-                        <%= image_tag dish.image, class: "dish_thumbnail" %>
+                            <%= image_tag dish.image, class: "dish_thumbnail" %>
                         <% end %> 
-                <% end %>
-            </div>
-        </li>
-    </div>
-<% end %>
+                    <% end %>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+</div>
 
-</ul>

@@ -58,3 +58,4 @@ gem 'pry-rails'
 
 
 gem 'jquery-rails'
+gem "cloudinary", "~> 1.23"

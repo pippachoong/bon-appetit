@@ -4,19 +4,19 @@ TODO:
 - ~~Delete meal from recipe book~~
 - ~~Prevent duplicate meals from being added to recipe book ~~
 - ~~send error message ~~
-- Tidy recipe's paragraph
+- ~~Tidy recipe's paragraph ~~
 - css 
-- add seed user profile
+- add seed: user profile
 - ~~you may also like section in show page~~
+- ~~profile icon next to user in recipe book /dish show page~~
+- link to youtube to website
 
 
 
 Nice to have:
-- ~~add biodata to user's profile~~
+- add biodata to user's profile
 - like button
-- link to youtube to website
 - search bar 
-- ~~profile icon next to user in recipe book /dish show page~~
 - more nested categories - vegan, gluten free, vegetarian, keto
 - more categories like baking,drinks etc. 
 

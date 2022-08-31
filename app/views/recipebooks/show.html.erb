@@ -16,7 +16,7 @@
 <!-- if image is not there, still run-->
 <!-- safe is from breaking-->
 <% if @recipebook.image.present? %>
-    <%= image_tag @recipebook.image, alt: @recipebook.name , class:"recipebook_thumbnail"%>
+    <%= cl_image_tag @recipebook.image, alt: @recipebook.name , class:"recipebook_thumbnail"%>
 <% end %>
   
 
