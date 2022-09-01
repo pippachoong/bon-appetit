@@ -19,15 +19,23 @@
    border: 2px solid red;
 }
 
-a:visited { 
-}
-a{
+/* a>h5 means h5 that is inside a */
+a, a>h5 {
     text-decoration: none;
     color:#E58F05;
+    margin-top: 10px;
+}
+
+/* mouse over link */
+/* a>h5 means h5 that is inside a */
+a:hover, a>h5:hover {
+  color: #8A5082;
+  font-weight: bold;
 }
 
 /*this is for title */
 a.brand{
+    font-size: 80px;
     color:rgb(255, 255, 255);
 }
 
@@ -36,11 +44,7 @@ a.nav-key{
     color:#ffd000;
 }
 
-/* mouse over link */
-a:hover {
-  color: #8A5082;
-  font-weight: bold;
-}
+
 
 /* selected link */
 a:active {
@@ -60,7 +64,7 @@ nav{
 }
 
 .nav{
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     padding-left: 120px;
 }
     
@@ -98,6 +102,21 @@ main{
     margin: 0 auto;
 }
 
+select{
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input{
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
 h1{
     font-family: 'Dancing Script', cursive;
@@ -108,7 +127,11 @@ h1{
     padding-top: 50px;
     margin-bottom: 0px;
     padding-top: 15px;
-   
+}
+
+h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
 }
 
 h3{
@@ -119,6 +142,7 @@ h3{
     margin-top: 20px;
 }
 
+
 h5{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 22px;
@@ -126,6 +150,7 @@ h5{
     color:#171C2D;
     margin-bottom: 10px;
 }
+
 
 h4{
     font-family: 'Josefin Sans', sans-serif;
@@ -148,7 +173,6 @@ footer {
     margin-top: 80px;
     padding-top: 15px;
     padding-left: 120px;
-    width: 100%;
     text-align: left;
 }
 
@@ -167,6 +191,7 @@ footer {
 ul{
    list-style-type: none;
    color:#171C2D;
+   padding-left: 0;
 }
 
 #quote{
@@ -219,7 +244,7 @@ ul{
 }
 
 .artwork{
-    width: 40%;
+    width: 100%;
     border-radius: 30px ;
     box-shadow: 10px 7px 8px rgba(0, 0, 0, 0.5);
 }
@@ -314,7 +339,7 @@ textarea{
 }
 
 .comments-response{
-   
+    padding-left: 50px;
     padding-top: 20px;
 }
 
@@ -344,6 +369,19 @@ textarea{
     margin: 0 auto;
     text-align: center;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.recipe{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+}
+
+.recipe-top{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top:50px;
 }
 
 /* dishes index page */
@@ -415,8 +453,8 @@ textarea{
     gap: 20px;
 }
 
-/* 
-div{
+
+/* div{
     border: 2px solid rgb(78, 78, 78);
 } */
 

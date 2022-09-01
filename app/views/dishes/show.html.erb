@@ -27,12 +27,12 @@
 <br><br>
 
 <div>
-    <div>
-    <p> Love it? Add this recipe to your recipe book!</p>
-    </div>
     <% if @current_user.present?%> <!--check if user is logged in -->
         <!-- need 'if condition' to let the code knows how we want the hash,flash[] temporary prints out the string . need to create <div> to customise this temporary text
          -->
+        <div>
+        <p> Love it? Add this recipe to your recipe book!</p>
+        </div>
         <% if flash[:error] %>
             <div class="error-message">
                 <%= flash[:error] %>
@@ -48,41 +48,63 @@
         <% end %>
         <!-- 
         We can also use the 'form_with' helper for generic forms that do NOT work with a model; to do this we use -->
+        <br>
         <%= form_with url: recipebook_add_dish_path(@dish.id), local: true do |f| %>
 
             <%= collection_select :recipebook, :id, @current_user.recipebooks.order(:created_at), :id, :name %>
         <%= f.submit 'Save it', class:'button button-showpage' %>
         <% end %>
-
+    <% else %>
+        <p> Log in to add this recipe to your recipe book!</p>
     <% end %>
         
 </div>
 
 
-<div class="recipe">
-    <p>
-    <%= image_tag @dish.image, alt:@dish_name, class:'artwork' %>
-    </p>
+<div class="recipe-top">
+    <div>
+        <%= image_tag @dish.image, alt:@dish_name, class:'artwork' %>
+    </div>
     
-    <h5> Name: </h5>
-    <p>
-    <%= @dish.name %>
-    </p>
-    
-    <h5> Remark: </h5>
-    <p>
-    <%= @dish.remark %>
-    </p>
+    <div class="recipe">
+        <h5> Name: </h5>
+        <p>
+        <%= @dish.name %>
+        </p>
+        
+        <h5> Remark: </h5>
+        <p>
+        <%= @dish.remark %>
+        </p>
 
-    <h5>Servings: </h5>
-    <p>
-    <%= @dish.servings %>
-    </p>
+        <h5>Servings: </h5>
+        <p>
+        <%= @dish.servings %>
+        </p>
+        
+        <h5>Cooking duration: </h5>
+        <p>
+        <%= @dish.cooking_time %>
+        </p>
+        
     
-    <h5>Cooking duration: </h5>
-    <p>
-    <%= @dish.cooking_time %>
-    </p>
+        <h5> Categories:</h5>
+            <ul>
+                <% @dish.categories.each do |category| %>
+                    <li>
+                        <%= link_to category_path(category.id), class:'category-name-link' do  %>
+                        <%= category.name %>
+                        <br>
+                        <% end %>
+                    </li>
+                <% end %>
+            </ul>
+    </div> 
+</div>
+
+
+
+<div class="recipe">
     
     <h5>
     Ingredients: 
@@ -104,19 +126,7 @@
 </div>
 
 
-<div>
-    <h5> Categories:</h5>
-        <ul>
-            <% @dish.categories.each do |category| %>
-                <li>
-                    <%= link_to category_path(category.id), class:'category-name-link' do  %>
-                    <%= category.name %>
-                    <br>
-                    <% end %>
-                </li>
-            <% end %>
-        </ul>
-</div> 
+
 
 <!--Comments section ------------------------------------------------------>
 <div class="comments-container">
@@ -170,7 +180,7 @@
             <div>
                 <%= link_to dish_path(dish) do %>
                     <%= image_tag dish.image, class: "dish-others-thumbnail", alt: dish.name %> 
-                    <p><%= dish.name %><p>
+                    <h5><%= dish.name %></h5>
                 <% end %>
             </div>
         <% end %>

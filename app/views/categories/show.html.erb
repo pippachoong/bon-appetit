@@ -1,17 +1,13 @@
-<h1><%= @category.name %></h1>
+<h2><%= @category.name %></h2>
 
-<div>
+<div class= "dishes-container">
     <% @category.dishes.each do |dish| %>
         <div>
             <%= link_to dish_path(dish.id) do %>
-                <div>
-                <%= image_tag dish.image, class: "dish-thumbnail", alt: dish.name %>
-                </div>
-            <br>
+                <%= image_tag dish.image, class: "dish-show-thumbnail", alt: dish.name %>
+                <h5> <%= dish.name %></h5>
+                <br>
             <% end %>
-            <div>
-            <%= dish.name %>
-            </div>
        </div>
     <% end %>
 </div>
