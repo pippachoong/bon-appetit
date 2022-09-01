@@ -4,10 +4,10 @@
 <p> Try some heartwarming, inspiring recipes!  </p>
 
  
-
+<%# <% @dishes.all[-4..-1].each do |dish| %> 
 
 <div class= "dishes-container">
-        <% @dishes.all[-4..-1].each do |dish| %>
+        <% @dishes.all.each do |dish| %>
                 <div >
                     <%= link_to dish_path(dish.id) do %>
                         <%= image_tag dish.image, class: "dish-show-thumbnail" %>

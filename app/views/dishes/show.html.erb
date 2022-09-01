@@ -173,22 +173,16 @@
 <!--categories has many dishes and vice versa. using .sample to randomly pick the categories from this dish 
 -->
 <div>
-    <div>
-        <h5> You May Also Like: </h5>
-            <ul>
-                <% @dish.categories.sample.dishes.each do |dish| %>
-                    <li>
-                        <div>
-                        <%= link_to dish_path(dish) do %>
-                        <%= image_tag dish.image, class: "dish-thumbnail", alt: dish.name %> 
-                        <%= dish.name %>
-                        </div>
-                        <br>
-                        <% end %>
-                    </li>
+    <h5> You May Also Like: </h5>
+    <div class="dish-others-container">
+        <% @dish.categories.sample.dishes.each do |dish| %>
+            <div>
+                <%= link_to dish_path(dish) do %>
+                    <%= image_tag dish.image, class: "dish-others-thumbnail", alt: dish.name %> 
+                    <%= dish.name %>
                 <% end %>
-            </ul>
-        
+            </div>
+        <% end %>
     </div> 
 </div>
 
