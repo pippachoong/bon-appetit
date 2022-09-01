@@ -3,25 +3,19 @@
 <h3> Trending Recipes </h3>
 <p> Try some heartwarming, inspiring recipes!  </p>
 
- <!-- new form - to post a recipe -->
- <%= link_to 'Publish Recipe', new_dish_path %>
- <br>
+ 
 
 
 <div class= "dishes-container">
-    <ul>
-        <% @dishes.all.each do |dish| %>
-            <li>
+        <% @dishes.all[-4..-1].each do |dish| %>
                 <div >
                     <%= link_to dish_path(dish.id) do %>
-                        <%= image_tag dish.image, class: "dish-thumbnail" %>
+                        <%= image_tag dish.image, class: "dish-show-thumbnail" %>
                     <br>
                     <% end %>
                     <%= dish.name %>
                 </div>
-           <li>
         <% end %>
-    </ul>
 </div>
 
 

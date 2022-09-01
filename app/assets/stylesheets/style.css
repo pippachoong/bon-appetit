@@ -30,7 +30,7 @@ a:visited {
 }
 a{
     text-decoration: none;
-    color:#ffd000;
+    color:#E58F05;
 }
 
 /*this is for title */
@@ -38,9 +38,14 @@ a.brand{
     color:rgb(255, 255, 255);
 }
 
+/*this is for nav*/
+a.nav-key{
+    color:#ffd000;
+}
+
 /* mouse over link */
 a:hover {
-  color: #374452;
+  color: #8A5082;
   font-weight: bold;
 }
 
@@ -61,7 +66,8 @@ nav{
     background-color:#FFDCA2;
     background-color:#ffd90070; */
     /* background-color:black; */
-    background-color: #6c6a6a;
+    /* background-color: #6c6a6a; */
+    background-color: #CF7B7C;
     position: relative;
     
 }
@@ -80,10 +86,14 @@ nav{
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 125px;
+    width: 250px;
     text-align: center;
     padding-right: 50px;
 
+}
+/* for login text */
+.login{
+    font-size: 20px;
 }
 
 body{
@@ -129,6 +139,7 @@ h5{
 p{
    font-family: 'Josefin Sans', sans-serif;
    color:#171C2D;
+   font-size: 18px;
 }
 
 .dish-thumbnail{
@@ -291,6 +302,12 @@ ul{
     gap: 20px;
 }
 
+
+.dish-show-thumbnail{
+    width: 100%;
+    border-radius: 30px ;
+    box-shadow: 10px 7px 8px rgba(0, 0, 0, 0.5);
+}
 
 .category_thumbnail {
     width: 100%;

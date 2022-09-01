@@ -10,7 +10,8 @@ TODO:
 - ~~link to youtube to website~~
 - css 
 - add seed: all dishes and recipebooks
-- users show page
+- ~~users show page~~
+- add changable quotes
 
 
 
@@ -18,6 +19,7 @@ Nice to have:
 - add biodata to user's profile
 - like button
 - search bar 
+Due to time constrain, only showing certain main ingredients: 
 - more nested categories - vegan, gluten free, vegetarian, keto
 - more categories like baking,drinks etc. 
 
