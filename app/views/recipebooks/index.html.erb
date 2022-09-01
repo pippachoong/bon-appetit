@@ -19,7 +19,7 @@ Current collections: <%= pluralize(@recipebooks.length, 'recipe books') %>
                     </h3>
                     <% recipebook.dishes.each do |dish| %>
                         <%= link_to dish_path(dish.id) do %>
-                            <%= image_tag dish.image, class: "dish_thumbnail" %>
+                            <%= image_tag dish.image, class: "dish-thumbnail" %>
                         <% end %> 
                     <% end %>
                 </div>

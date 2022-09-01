@@ -10,6 +10,7 @@ TODO:
 - ~~link to youtube to website~~
 - css 
 - add seed: all dishes and recipebooks
+- users show page
 
 
 

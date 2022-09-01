@@ -3,15 +3,31 @@
 <h3> Trending Recipes </h3>
 <p> Try some heartwarming, inspiring recipes!  </p>
 
-
  <!-- new form - to post a recipe -->
  <%= link_to 'Publish Recipe', new_dish_path %>
+ <br>
+
+
+<div class= "dishes-container">
+    <ul>
+        <% @dishes.all.each do |dish| %>
+            <li>
+                <div >
+                    <%= link_to dish_path(dish.id) do %>
+                        <%= image_tag dish.image, class: "dish-thumbnail" %>
+                    <br>
+                    <% end %>
+                    <%= dish.name %>
+                </div>
+           <li>
+        <% end %>
+    </ul>
+</div>
+
+
 
 
  <!-- list of dishes by categories -->
-
-
-
     <!--
     @dishes.sort is sorting by the dish random id/string and it doesnt work by getting the latest 4 dishes
     @dishes.all means getting all dishes in the list and retrieving the last four dishes
@@ -27,19 +43,4 @@
         <Dish:0x000000015c2b6508
     ]
     -->
-    <div>
-
-        <% @dishes.all[-4..-1].each do |dish| %>
-            
-            <div>
-                <%= link_to dish_path(dish.id) do %>
-                    <%= image_tag dish.image, class: "dish_thumbnail" %>
-                <br>
-                <% end %>
-                <%= dish.name %>
-            </div>
-           
-        <% end %>
-
-    </div>
 
