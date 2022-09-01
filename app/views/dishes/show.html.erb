@@ -6,31 +6,29 @@
 </h3>
 
 <%# TO DO: edit show page - for the user only%>
-<%= link_to 'Edit Recipe', edit_dish_path(@dish) %>
+<div class="recipe-edit">
+    <%= link_to 'Edit Recipe', edit_dish_path(@dish),class:'category-name-link' %>
+    •
 
-
-<%# TO DO: delete show page - for the user only%>
-<%= link_to 'Remove Recipe', dish_path(@dish), method: 'delete' %>
-
-<%= link_to 'Back to home', dishes_path %>
-
+    <%# TO DO: delete show page - for the user only%>
+    <%= link_to 'Remove Recipe', dish_path(@dish), method: 'delete',class:'category-name-link' %>
+</div>
 
 <%#Link to user profile %>
 <div class = "profile">
-    Recipe shared by 
+    <h4>Recipe shared by </h4>
     <br>
     <div>
     <%= image_tag @dish.user.image , class: "user-thumbnail"%>
-    <%= link_to @dish.user.name, user_path(@dish.user.id) %>
     </div>
+    <%= link_to @dish.user.name, user_path(@dish.user.id),class:'category-name-link' %>
     <%#TO DO: show user's picture %>
 </div>
 <br><br>
 
 <div>
     <div>
-    <p> Love it? </p>
-    <p> Add this recipe to your recipe book!</p>
+    <p> Love it? Add this recipe to your recipe book!</p>
     </div>
     <% if @current_user.present?%> <!--check if user is logged in -->
         <!-- need 'if condition' to let the code knows how we want the hash,flash[] temporary prints out the string . need to create <div> to customise this temporary text
@@ -53,7 +51,7 @@
         <%= form_with url: recipebook_add_dish_path(@dish.id), local: true do |f| %>
 
             <%= collection_select :recipebook, :id, @current_user.recipebooks.order(:created_at), :id, :name %>
-        <%= f.submit 'Save it', class:'button' %>
+        <%= f.submit 'Save it', class:'button button-showpage' %>
         <% end %>
 
     <% end %>
@@ -107,66 +105,59 @@
 
 
 <div>
-    <p> Categories:
+    <h5> Categories:</h5>
         <ul>
             <% @dish.categories.each do |category| %>
                 <li>
-                    <%= link_to category_path(category.id) do %>
+                    <%= link_to category_path(category.id), class:'category-name-link' do  %>
                     <%= category.name %>
                     <br>
                     <% end %>
                 </li>
             <% end %>
         </ul>
-    </p>
 </div> 
 
 <!--Comments section ------------------------------------------------------>
 <div class="comments-container">
-
-    <h5>Comments</h5>
-    <%= form_with model: @comment, local: true do |f| %>
-        <div>
-            <%= f.label 'Submit New Comment' %>
+    <div class="enter-comments">
+        <h5>Comments</h5>
+        <%= form_with model: @comment, local: true do |f| %>
+            <div>
+                <%= f.label 'Submit New Comment below' %>
+                <br>
+                <%= f.text_area :review %>
+            </div>
+            <%= f.hidden_field :dish_id, value: @dish.id %>
+            <% if @current_user != nil %>
+            <%= f.hidden_field :user_id, value: @current_user.id %>
+            <% end %>
             <br>
-            <%= f.text_area :review %>
-        </div>
-        <%= f.hidden_field :dish_id, value: @dish.id %>
-        <% if @current_user != nil %>
-        <%= f.hidden_field :user_id, value: @current_user.id %>
+            <%= f.submit 'Submit', class:'button' %>
         <% end %>
-        <br>
-        <%= f.submit 'Submit', class:'button' %>
-    <% end %>
-
+    </div>
  
     <ul>
-        <%  @dish_comments.each do |comment| %>
-            <div>
-            <em>Last updated <%= time_ago_in_words(comment.updated_at) %> ago</em>
-            <div>
-            <% if comment.user_id == nil  %>
-            <li>
-                <div>
-                    <em>Anonymous</em>
+        <div class="comments-response">
+            <% @dish_comments.each do |comment| %>
+                
+                <% if comment.user_id == nil  %>
+                <li>
                     <%= image_tag("https://www.booksie.com/files/profiles/22/mr-anonymous_230x230.png", class: "user-thumbnail")%>
-                </div> 
-                <div>
-                    <%= comment[:review]%>
-                </div>
-            </li>
-                <% else %>
-            <li>
-                <div>
+                    <h4>Anonymous</h4>
+                    <p class="no-margin">Last updated <%= time_ago_in_words(comment.updated_at) %> ago</p>
+                    <p><%= comment[:review]%></p>
+                </li>
+                    <% else %>
+                <li>
                     <%= image_tag comment.user.image , class:"user-thumbnail"%>
-                    <em><%=comment.user.name%></em>
-                </div>
-                <div> 
-                    <%= comment[:review]%>
-                </div>
-            </li>
-            <%  end %>
-        <% end %>
+                    <h4><%=comment.user.name%></h4>
+                    <p class="no-margin">Last updated <%= time_ago_in_words(comment.updated_at) %> ago</p>
+                    <p><%= comment[:review]%></p>
+                </li>
+                    <%  end %>
+            <% end %>
+        </div>
     </ul>
 </div>
 
@@ -175,16 +166,18 @@
 <div>
     <h5> You May Also Like: </h5>
     <div class="dish-others-container">
-        <% @dish.categories.sample.dishes.each do |dish| %>
+        <% @dish.categories.sample.dishes[-5..-1].each do |dish| %>
             <div>
                 <%= link_to dish_path(dish) do %>
                     <%= image_tag dish.image, class: "dish-others-thumbnail", alt: dish.name %> 
-                    <%= dish.name %>
+                    <p><%= dish.name %><p>
                 <% end %>
             </div>
         <% end %>
     </div> 
 </div>
+
+
 
 
 

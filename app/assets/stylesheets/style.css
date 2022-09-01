@@ -72,9 +72,12 @@ nav{
     
 }
 .nav{
-    margin-bottom: 0px;
     
+    margin-bottom: 80px;
+    padding-left: 120px;
 }
+    
+
 
 .nav li {
   display: inline-block;
@@ -87,6 +90,7 @@ nav{
     top: 0px;
     right: 0px;
     width: 250px;
+    height: 100%;
     text-align: center;
     padding-right: 50px;
 
@@ -116,7 +120,7 @@ h1{
     margin-left: 200px;
     padding-top: 50px;
     margin-bottom: 0px;
-    padding-top: 0px;
+    padding-top: 15px;
    
 }
 
@@ -137,11 +141,37 @@ h5{
     margin-bottom: 10px;
 }
 
+h4{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color:#171C2D;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
 p{
    font-family: 'Josefin Sans', sans-serif;
    color:#171C2D;
    font-size: 18px;
 }
+
+footer {
+    height: 40px;
+    margin-bottom: 0px;
+    margin-top: 80px;
+    padding-top: 15px;
+    padding-left: 120px;
+    width: 100%;
+    text-align: left;
+}
+
+
+.no-margin{
+     margin-top: 0px;
+  
+}
+
 
 .dish-thumbnail{
     width: 19%;
@@ -208,6 +238,7 @@ ul{
 .artwork{
     width: 40%;
     border-radius: 30px ;
+    box-shadow: 10px 7px 8px rgba(0, 0, 0, 0.5);
 }
 
 .user-thumbnail{
@@ -216,7 +247,7 @@ ul{
 }
 
 .recipebook_thumbnail{
-    width:20vw;
+    width:100%;
     border-radius: 30px ;
 }
 
@@ -260,13 +291,55 @@ ul{
 
 /* show page */
 
+.button.button-showpage{
+    padding: 5px;
+}
+
 
 .profile{
-    background-color:white,
+    background-color:white;
+    margin-top: 20px;
+    padding-left: 50px;
+    border-radius: 30px ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
 }
 
 .comments-container{
     background-color:white;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    border-radius: 30px ;
+    box-shadow: 10px 7px 8px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-edit{
+   padding-left: 50px;
+}
+
+textarea{
+  width:95%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:80px;
+}
+
+.enter-comments{
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.comments-response{
+   
+    padding-top: 20px;
+}
+
+.category-name-link{
+    font-size: 20px;
 }
 
 /* recipebook show */
@@ -275,24 +348,22 @@ ul{
 }
 
 .recipebook-cover-image{
-    max-width:100%;
-    max-height:20%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-radius: 30px ;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    background-position: center;
 }
 
 .recipebook-name{
-    font-size: 15px;
+    font-size: 70px;
     color: white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
+    position:absolute;
     margin: 0 auto;
-    text-align: justify;
-    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* dishes index page */
@@ -338,7 +409,40 @@ ul{
     box-shadow: 10px 7px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* div{
+
+/* recipe book */
+
+.user-dish-thumbnail{
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 10px 7px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.user-recipes{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.recipebook-show-cover{
+    max-width:100%;
+    max-height:20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 30px ;
+    filter: brightness(59%) contrast(68%) saturate(80%) sepia(18%);
+    z-index: -1;   
+}
+.all-dishes-in-recipebook{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+div{
     border: 2px solid rgb(78, 78, 78);
-} */
+     
+}
 

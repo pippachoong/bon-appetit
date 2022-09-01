@@ -17,21 +17,17 @@
 <% end %>
 <br>
 
-<div class>
-    <h5> Receipes shared </h5>
-    <ul>
+    <h5> Recipes shared </h5>
+<div class="user-recipes">
         <% @user.dishes.all.each do |dish| %>
-            <li>
                 <div >
                     <%= link_to dish_path(dish.id) do %>
-                        <%= image_tag dish.image, class: "dish-show-thumbnail" %>
+                        <%= image_tag dish.image, class: "user-dish-thumbnail" %>
                     <br>
                     <% end %>
-                    <%= dish.name %>
+                    <p><%= dish.name %><p>
                 </div>
-           <li>
         <% end %>
-    </ul>
 </div>
 
 

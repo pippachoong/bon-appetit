@@ -2,8 +2,10 @@
     <h3 class="recipebook-name"> Recipebook <%= @recipebook.name %></h3>
     <!-- if image is not there, still run-->
     <!-- safe is from breaking-->
+    <!--cant use @cl_image_tag here as need to make it a background image from div, hence cl link was pasted--->
     <% if @recipebook.image.present? %>
-        <p class="recipebook-cover-image"><%= cl_image_tag @recipebook.image, alt: @recipebook.name , class:"recipebook_thumbnail"%></p>
+        <div class="recipebook-cover-image" style="background-image: url(http://res.cloudinary.com/dwmvmdhlu/image/upload/<%=@recipebook.image%>);">
+        </div>
     <% end %>
 </div> 
 
@@ -30,9 +32,12 @@
             <%= link_to dish_path(dish.id) do %>
                 <%= image_tag dish.image, class:"recipebook_thumbnail"%>
             <% end %>
-            <h3> <%= dish.name %> </h3>
-            <!-- passsing recipebook id in order to find recipe book id-->
-            <%= link_to 'Remove', recipebook_remove_dish_path(dish_id: dish.id, recipebook_id: @recipebook.id), method: 'delete' %>
+                <!--Only user of the recipebook can delete the dish from recipebook-->
+                <% if @current_user.present? && @current_user.id == @recipebook.user_id %>
+                    <!-- passsing recipebook id in order to find recipe book id-->
+                    <%= link_to 'Remove', recipebook_remove_dish_path(dish_id: dish.id, recipebook_id: @recipebook.id), method: 'delete' %>
+                <% end %>
+            <h5> <%= dish.name %> </h5>
         </div>
     <% end %>
 </div> 

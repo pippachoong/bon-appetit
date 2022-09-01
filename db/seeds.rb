@@ -859,7 +859,7 @@ puts "created #{Recipebook.count} recipebooks"
 rb1.dishes << d1 << d5 << d3 << d8 << d11
 rb2.dishes << d16 << d15 << d7 << d3 << d23
 rb3.dishes << d5 << d4 << d20 << d16 << d8 
-rb4.dishes << d16 << d22 << d23 << d10 << d16
+rb4.dishes << d16 << d22 << d23 << d10 << d2
 rb5.dishes << d7 << d14 << d25 << d3 << d13
 rb6.dishes << d10 << d9 << d5 << d24 << d21
 

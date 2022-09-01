@@ -34,7 +34,6 @@ class DishesController < ApplicationController
     @dishes = Dish.all
     
     
-
   end
 
   def show
