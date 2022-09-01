@@ -49,6 +49,7 @@ We were given a week to build a full-stack application with Rails app applying w
 > * biodata to user's profile
 > * 'like' button
 > * search bar 
+> * image model so users can upload more pictures
 > * More main ingredients to the category model
 > * more nested categories - vegan, gluten free, vegetarian, keto
 > * Other models such as like baking,drinks etc. 
@@ -70,5 +71,5 @@ Due to time constraint, no issues are detected yet. TBA.
 - ~~add seed: all dishes and recipebooks~~
 - ~~users show page~~
 - ~~dish show page needs more love~~
-- read me - add html link!
+- ~~read me - add html link!~~
 - css (80%)

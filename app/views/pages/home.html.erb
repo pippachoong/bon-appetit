@@ -3,8 +3,9 @@
 <h3> Food for the Soul </h3>
 <div class="quote-container">
     <p id="quote">
-        “If you really want to make a friend, go to someone’s house and eat with him… The people who give you their food give you their heart.”
-        <strong>Cesar Chavez</strong>
+        “<%= @quote[:quote] %>”
+        <br>
+        <strong><%= @quote[:author] %></strong>
     </p>
     
         <%= image_tag "quote-photo.jpg" , class:'quote-image'%>
