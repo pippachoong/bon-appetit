@@ -12,6 +12,7 @@ TODO:
 - add seed: all dishes and recipebooks
 - ~~users show page~~
 - add changable quotes
+- dish show page needs more love
 
 
 

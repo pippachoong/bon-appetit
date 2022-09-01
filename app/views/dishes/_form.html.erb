@@ -20,6 +20,11 @@
     <%= f.text_field :name %>
     <br><br>
 
+    <%= f.label :remark %>
+    <br>
+    <%= f.text_field :remark, placeholder: 'e.g. What inspired your dish?' %>
+    <br><br>
+
     <%= f.label :servings %>
     <br>
     <%= f.number_field :servings, in: 1..10 %>

@@ -41,6 +41,7 @@ Dish.destroy_all
 
 d1 = Dish.create!(
     name:'Sweet Chicken Surprise',image:'https://img.jamieoliver.com/jamieoliver/recipe-database/64975478.jpg?tr=w-800,h-1066', 
+    remark: "This is an all time favourite dish from family and friends! Hope it's the same for you too!",
     servings:2, 
     cooking_time:'40 mins', 
     ingredients:'2 x 200 g free-range chicken legs
@@ -57,6 +58,7 @@ Add a splash of water to the pan and give it a gentle shimmy to pick up all the 
 
 d2 = Dish.create!(
     name:'Chicken & Mushroom Puff Pie', 
+    remark: "My kids loved this dish. Very easy to make!",
     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/136440026.jpg?tr=w-800,h-1066', 
     servings: 4, 
     cooking_time:'50 mins', 
@@ -76,6 +78,7 @@ Meanwhile, unroll the pastry sheet on its paper and score a 3cm border around th
 
 d3 = Dish.create!(
      name:'Sweet & Sour Chicken Noodles', 
+     remark: "Quick and easy dish! Can't go wrong!",
      image:'https://img.jamieoliver.com/jamieoliver/recipe-database/89081008.jpg?tr=w-800,h-1066', 
      servings: 2, 
      cooking_time:'20 mins', 
@@ -98,6 +101,7 @@ Taste and season to perfection with sea salt and black pepper, then dish up and 
 
 d4 = Dish.create!(
      name:'Incredibly Delicious Chicken Salad', 
+     remark: "Somthing healthy and delicious. My all time favourite dish.",
      image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134796991.jpg?tr=w-800,h-1066', 
      servings: 4, 
      cooking_time:'15 mins', 
@@ -135,6 +139,7 @@ Dollop over 4 tablespoons of natural yoghurt and drizzle with 2 teaspoons of har
 
 d5 = Dish.create!(
      name:'Spiced Beef & Rice Hot Pot', 
+     remark: "This is a dish to impress guest. Try it out!",
      image:'https://img.jamieoliver.com/jamieoliver/recipe-database/46257452.jpg?tr=w-800,h-1066', 
      servings: 4, 
      cooking_time:'2 hours', 
