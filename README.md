@@ -8,8 +8,8 @@ TODO:
 - ~~you may also like section in show page~~
 - ~~profile icon next to user in recipe book /dish show page~~
 - ~~link to youtube to website~~
-- css 
-- add seed: all dishes and recipebooks
+- css (80%)
+- ~~add seed: all dishes and recipebooks~~
 - ~~users show page~~
 - add changable quotes
 - dish show page needs more love
