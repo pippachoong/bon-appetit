@@ -14,11 +14,21 @@ class DishesController < ApplicationController
     @dish.user_id = @current_user.id
     @dish.save #this is actually the create, the DB insert
 
+    # Check if a file was uploaded via the form, and if so,
+    # and then forward that file ID it gives us back, into the 
+    # recipebook object
+    if params[:dish][:image].present?
+      # upload to Cloudinary and capture the response, which includes a new ID
+      response = Cloudinary::Uploader.upload params[:dish][:image]
+      @dish.image = response["public_id"]#view in iTerm/terminal
+    end # image upload
 
     # look up the categories selected in form checkboxes and associate them with this new dish
     # @dish.categories only takes in object and cannot take in ids. So .find will convert into objects for us
     @dish.categories << Category.find(params[:category_ids])
     #                     arguments of categories objects^^
+
+
 
     # check for validation errors
     if @dish.persisted?
@@ -37,6 +47,7 @@ class DishesController < ApplicationController
   end
 
   def show
+    # raise 'hell'
     @dish =  Dish.find params[:id]
     @comment  = Comment.new
     @dish_comments = Comment.where(dish_id: params[:id])
@@ -71,6 +82,12 @@ class DishesController < ApplicationController
       return #this is to stop code from running the next step
     end
 
+    if params[:dish][:image].present?
+      # upload to Cloudinary and capture the response, which includes a new ID
+      response = Cloudinary::Uploader.upload params[:dish][:image]
+      @dish.image = response["public_id"]#view in iTerm/terminal
+    end # image upload
+
     if @dish.update dish_params
       redirect_to dish_path(@dish)
     else
@@ -92,7 +109,7 @@ class DishesController < ApplicationController
 
   #strong params - used to increate security of data sent through forms
   def dish_params
-    params.require(:dish).permit(:name,:image, :servings,:cooking_time,:ingredients, :methods)
+    params.require(:dish).permit(:name, :servings,:cooking_time,:ingredients, :methods)
   end
 
 end

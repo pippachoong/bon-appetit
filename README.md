@@ -46,13 +46,15 @@ We were given a week to build a full-stack application with Rails app applying w
 
 #### Wish List 
 
-> * biodata to user's profile
 > * 'like' button
 > * search bar 
+> * Captcha link to verify user when commenting
+> * biodata to user's profile
 > * image model so users can upload more pictures
 > * More main ingredients to the category model
 > * more nested categories - vegan, gluten free, vegetarian, keto
 > * Other models such as like baking,drinks etc. 
+
 
 ---
 #### Issues

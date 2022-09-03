@@ -40,7 +40,8 @@ puts "creating dishes"
 Dish.destroy_all
 
 d1 = Dish.create!(
-    name:'Sweet Chicken Surprise',image:'https://img.jamieoliver.com/jamieoliver/recipe-database/64975478.jpg?tr=w-800,h-1066', 
+    name:'Sweet Chicken Surprise',
+    image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078891/samples/recipebooks/1_yoh5e9.webp', 
     remark: "This is an all time favourite dish from family and friends! Hope it's the same for you too!",
     servings:2, 
     cooking_time:'40 mins', 
@@ -59,7 +60,7 @@ Add a splash of water to the pan and give it a gentle shimmy to pick up all the 
 d2 = Dish.create!(
     name:'Chicken & Mushroom Puff Pie', 
     remark: "My kids loved this dish. Very easy to make!",
-    image:'https://img.jamieoliver.com/jamieoliver/recipe-database/136440026.jpg?tr=w-800,h-1066', 
+    image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078891/samples/recipebooks/2_x7ji1d.webp', 
     servings: 4, 
     cooking_time:'50 mins', 
     ingredients:'500 g free-range skinless boneless chicken thighs
@@ -79,7 +80,7 @@ Meanwhile, unroll the pastry sheet on its paper and score a 3cm border around th
 d3 = Dish.create!(
      name:'Sweet & Sour Chicken Noodles', 
      remark: "Quick and easy dish! Can't go wrong!",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/89081008.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078891/samples/recipebooks/3_ynwlze.webp', 
      servings: 2, 
      cooking_time:'20 mins', 
     ingredients:'2 x 200 g free-range chicken thighs , skin on, bone in
@@ -102,7 +103,7 @@ Taste and season to perfection with sea salt and black pepper, then dish up and 
 d4 = Dish.create!(
      name:'Chicken Salad', 
      remark: "Somthing healthy and delicious. My all time favourite dish.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134796991.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078892/samples/recipebooks/4_hwpap2.webp', 
      servings: 4, 
      cooking_time:'15 mins', 
     ingredients:'
@@ -139,7 +140,7 @@ Dollop over 4 tablespoons of natural yoghurt and drizzle with 2 teaspoons of har
 d5 = Dish.create!(
      name:'Chicken & hot sauce gravy', 
      remark: "If you’re a fan of hot sauce, you’ll love this mighty chicken recipe",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/91844239.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078892/samples/recipebooks/5_ur44ed.webp', 
      servings: 6, 
      cooking_time:'2 hours 15 mins', 
     ingredients:'
@@ -159,13 +160,12 @@ To make the slaw, peel the onion and coarsely grate, along with the apple, carro
 Place a large non-stick frying pan on a medium heat and toast the peanuts until golden, tossing regularly. Tip into a pestle and mortar and pound until fine. Finely chop the chives.
 Remove the chicken to a serving platter to rest. Place the roasting tray on the hob over a medium heat. Add a good splash of cider vinegar and let it cook away for a couple of minutes, scraping up any sticky bits from the base and sides of the tray.
 Pour in the reserved chicken juices with 100ml of boiling water, bring to the boil, then reduce the heat and simmer for 3 minutes, or until thickened and reduced. Add an extra dollop of hot sauce to taste, then strain the gravy through a sieve into a warm jug.
-Scatter the crushed peanuts and chopped chives over the chicken and serve with the hot sauce gravy and rainbow slaw. Delicious served with baked sweet potatoes.
-')
+Scatter the crushed peanuts and chopped chives over the chicken and serve with the hot sauce gravy and rainbow slaw. Delicious served with baked sweet potatoes.')
 
 d6 = Dish.create!(
      name:'Spiced Beef & Rice Hot Pot', 
      remark: "This is a dish to impress guest. Try it out!",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/46257452.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078891/samples/recipebooks/6_gufhkd.webp', 
      servings: 4, 
      cooking_time:'2 hours', 
     ingredients:'
@@ -197,7 +197,7 @@ Dollop over 4 tablespoons of natural yoghurt and drizzle with 2 teaspoons of har
 d7 = Dish.create!(
      name:'Harissa meatball wraps', 
      remark: "It's always handy to have a stash of tasty meal elements ready and waiting in the freezer for those extra-busy days.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134622444.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078893/samples/recipebooks/7_raih17.webp', 
      servings: 5, 
      cooking_time:'30 mins', 
     ingredients:'
@@ -226,7 +226,7 @@ Warm 4 tortilla through, then serve alongside the pan of meatballs (4 per per po
 d8 = Dish.create!(
      name:'Beef cheek ragù', 
      remark: "Inspired by Nonna Miriam and her obsession for slow-cooking and making tough, cheaper cuts of meat the hero, this is amazing served with mashed potato, crusty bread or oozy polenta, or even tossed with freshly cooked pasta. ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/77639009.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078893/samples/recipebooks/8_x9mrgv.webp', 
      servings: 10, 
      cooking_time:'5 hours', 
     ingredients:'
@@ -252,8 +252,8 @@ Pour in the wine, let it reduce by half, then pour in the reserved porcini water
 
 d9 = Dish.create!(
      name:'Jewish artichokes', 
-     remark: "Who doesnt like artichoke? ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/77878565.jpg?tr=w-800,h-1066', 
+     remark: " who doesnt like artichoke ",
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078894/samples/recipebooks/9_pgg2wq.webp', 
      servings: 6, 
      cooking_time:'2 hours', 
     ingredients:'
@@ -280,7 +280,7 @@ Meanwhile, pour 5cm of vegetable oil into a large, sturdy, deep-sided pan on a h
 d10 = Dish.create!(
      name:'Oxtail stew', 
      remark: "A winter classic and oxtail is one of those forgotten ingredients coming back into vogue. The addition of orange, dates and spices lends sweetness and fragrance. It makes great leftovers, ideally tossed through pasta. ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/46261047.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078894/samples/recipebooks/10_nzirym.webp', 
      servings: 8, 
      cooking_time:'4 hours', 
     ingredients:'
@@ -311,7 +311,7 @@ Remove the oxtail from the oven and skim any excess fat from the surface. Serve 
 d11 = Dish.create!(
      name:'Rogan josh Scotch eggs', 
      remark: "Simple West meets East dish! ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/100021006.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078893/samples/recipebooks/11_eslaao.webp', 
      servings: 6, 
      cooking_time:'1 hour', 
     ingredients:'
@@ -335,7 +335,7 @@ Cut in half and serve seasoned lightly with sea salt and with mango chutney for 
 d12 = Dish.create!(
      name:'Brussels sprouts', 
      remark: "Celebrate the humble sprout with this insanely delicious recipe. Crisp cubes of apple provide beautiful sweetness, while sausage – and Worcestershire sauce (my secret ingredient) – gives a contrasting savoury kick.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/99602345.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078893/samples/recipebooks/12_jdqebb.webp', 
      servings: 6, 
      cooking_time:'30 mins', 
     ingredients:'
@@ -357,7 +357,7 @@ d12 = Dish.create!(
 d13 = Dish.create!(
      name:'Silky squash risotto', 
      remark: "Perfect for a chilly day and it's easy to make.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/121936025.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078894/samples/recipebooks/13_ehw6nv.webp', 
      servings: 4, 
      cooking_time:'1 hour 20 mins', 
     ingredients:'
@@ -388,7 +388,7 @@ Pick over the remaining marjoram and serve topped with the broccoli. ')
 d14 = Dish.create!(
      name:'Veggie black bean enchiladas', 
      remark: "Looking for midweek inspiration? Here is this dish.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134397244.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078894/samples/recipebooks/14_uthqku.webp', 
      servings: 4, 
      cooking_time:'45 mins', 
     ingredients:'
@@ -426,7 +426,7 @@ Serve straight from the oven, scattered with the remaining coriander leaves, and
 d15 = Dish.create!(
      name:'Asparagus stir-fry', 
      remark: "Super easy and delicious meal.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134795904.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078895/samples/recipebooks/15_ht82va.webp', 
      servings: 4, 
      cooking_time:'30 mins', 
     ingredients:'
@@ -455,7 +455,7 @@ Serve the veggies alongside the tofu with some extra sliced red chilli and cooke
 d16 = Dish.create!(
      name:'Fish-pie', 
      remark: "One of my grandma's recipe. It's a total hit in the family",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/89156535.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078895/samples/recipebooks/16_tcnkac.webp', 
      servings: 6, 
      cooking_time:'1 hour 30 mins', 
     ingredients:'
@@ -489,8 +489,8 @@ Serve with some nice peas or greens, not forgetting your baked beans and tomato 
 
 d17 = Dish.create!(
      name:'Quickest white fish tagine', 
-     remark: "Easy meal to prepare for the busy week.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/109469720.jpg?tr=w-800,h-1066', 
+     remark: "Fishy licking good", 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078895/samples/recipebooks/17_werztu.webp',
      servings: 2, 
      cooking_time:'15 mins', 
     ingredients:'
@@ -510,10 +510,10 @@ Fluff up the couscous. Ripple the remaining harissa through the yoghurt, then sp
 
 d18 = Dish.create!(
      name:'Fish skewers', 
-     remark: "Perfect for getting the whole family to enjoy eating fish, this quick and easy dish is fun, fresh and zingy, and can be easily rustled up on a weeknight when you’re short on time. ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134566857.jpg?tr=w-800,h-1066', 
+     remark: "Perfect for getting the whole family to enjoy eating fish, this quick and easy dish is fun, fresh and zingy, and can be easily rustled up on a weeknight when you arere short on time",
+     image: 'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078896/samples/recipebooks/18_dglltx.webp', 
      servings: 4, 
-     cooking_time:'25 mins', 
+    cooking_time:'25 mins', 
     ingredients:'
 olive oil
 1 clove of garlic
@@ -538,7 +538,7 @@ Divide the lentil salad between plates, serving a kebab on top of each. Slice th
 d19 = Dish.create!(
      name:'Roasted mustard mackerel', 
      remark: "A colourful, healthy dish ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/46265324.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078895/samples/recipebooks/19_iz8wks.webp', 
      servings: 2, 
      cooking_time:'1 hour', 
     ingredients:'
@@ -567,7 +567,7 @@ Toss 2 large handfuls of rocket with a squeeze of juice from ½ a lemon and spri
 d20 = Dish.create!(
      name:'Sweet potato fishcakes', 
      remark: "This is my hit dish. Cant go wrong with dish and potato.",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134584618.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078895/samples/recipebooks/20_a5lpts.webp', 
      servings: 4, 
      cooking_time:'1 hour 10 mins', 
     ingredients:'
@@ -599,7 +599,7 @@ Serve the fishcakes and salsa scattered with baby mint leaves, with a good porti
 d21 = Dish.create!(
      name:'Spanish tortilla', 
      remark: "Can be served hot or cold and is a fantastic way of using up all kinds of ingredients – simply add in any leftover vegetables, crumbled or grated cheese, jarred red peppers or cooked sausage. ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/46260004.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078896/samples/recipebooks/21_wjlr6b.webp', 
      servings: 6, 
      cooking_time:'45mins', 
     ingredients:'
@@ -620,7 +620,7 @@ Turn out the tortilla onto a serving board, then cut into 6 wedges and serve hot
 d22 = Dish.create!(
      name:'Kedgeree', 
      remark: "Perfect for breakfast, brunch, lunch or a hangover. ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/64288356.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078897/samples/recipebooks/22_fyw4ow.webp',
      servings: 6, 
      cooking_time:'45mins', 
     ingredients:'
@@ -652,7 +652,7 @@ Place the eggs on top of the kedgeree, scatter over the coriander leaves, and a 
 d23 = Dish.create!(
      name:'Roll-and-go omelette wrap', 
      remark: "Quick weekend meal ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/70064531.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078896/samples/recipebooks/23_hy4mgc.webp', 
      servings: 1, 
      cooking_time:'10mins', 
     ingredients:'
@@ -678,7 +678,7 @@ Cut the wrap in half through the paper, when you’re ready to tuck in.
 d24 = Dish.create!(
      name:'Bennett frittata', 
      remark: "Quick fun meal ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/134798615.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078896/samples/recipebooks/24_r2n2jo.webp', 
      servings: 4, 
      cooking_time:'15mins', 
     ingredients:'
@@ -708,7 +708,7 @@ Speed-peel 30g of Emmental over the top. Get the frittata and focaccia out from 
 d25 = Dish.create!(
      name:'Mexican baked eggs', 
      remark: "Fruity egg meal ",
-     image:'https://img.jamieoliver.com/jamieoliver/recipe-database/90303516.jpg?tr=w-800,h-1066', 
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662078896/samples/recipebooks/25_zghzra.webp', 
      servings: 2, 
      cooking_time:'15mins', 
     ingredients:'
@@ -827,11 +827,11 @@ Recipebook.destroy_all
 
 rb1 = Recipebook.create!(
      name:'Weekend Meals',
-     image:'https://img.etimg.com/photo/msid-67268378,quality-100/weekend-gettyimages-657754434.jpg',
+     image:'weekend-gettyimages-657754434_bwreqn',
 )
 rb2 = Recipebook.create!(
      name:'Saturday Dinner Ideas',
-     image:'https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/07/593809-1-eng-GB_first-class-beef-curry-768x939.jpg',
+     image:'https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662076558/samples/recipebooks/weekend-gettyimages-657754434_bwreqn.jpg',
 )
 rb3 = Recipebook.create!(
      name:'Lunch Prep',

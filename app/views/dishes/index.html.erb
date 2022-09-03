@@ -5,13 +5,13 @@
 
 
 
-<%# <% @dishes.all[-4..-1].each do |dish| %> 
+
 
 <div class= "dishes-container">
     <% @dishes.all.each do |dish| %>
             <div >
                 <%= link_to dish_path(dish.id) do %>
-                    <%= image_tag dish.image, class: "dish-show-thumbnail" %>
+                    <%= cl_image_tag dish.image, class: "dish-show-thumbnail" %>
                 <h5><%= dish.name %><h5>
                 <br>
                 <% end %>

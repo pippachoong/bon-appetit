@@ -19,6 +19,7 @@ class PagesController < ApplicationController
         author: "Ernestine Ulmer"
       }
     ]
+    #sample. gives random output
     @quote = quotes.sample
   end
 

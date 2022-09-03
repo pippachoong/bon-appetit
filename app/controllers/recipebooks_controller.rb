@@ -51,7 +51,7 @@ class RecipebooksController < ApplicationController
 
     # Check if a file was uploaded via the form, and if so,
     # and then forward that file ID it gives us back, into the 
-    # mixtapes object
+    # object
     if params[:recipebook][:image].present?
       # upload to Cloudinary and capture the response, which includes a new ID
       response = Cloudinary::Uploader.upload params[:recipebook][:image]
@@ -123,7 +123,7 @@ class RecipebooksController < ApplicationController
 
   #strong params - used to increate security of data sent through forms
   def recipebook_params
-    params.require(:recipebook).permit(:name,:image, :user_id, :dish_id)
+    params.require(:recipebook).permit(:name, :user_id, :dish_id)
   end
 
 end

@@ -22,7 +22,7 @@
         <% @user.dishes.all.each do |dish| %>
                 <div >
                     <%= link_to dish_path(dish.id) do %>
-                        <%= image_tag dish.image, class: "user-dish-thumbnail" %>
+                        <%= cl_image_tag dish.image, class: "user-dish-thumbnail" %>
                     <br>
                     <% end %>
                     <p><%= dish.name %><p>

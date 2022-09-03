@@ -63,7 +63,7 @@
 
 <div class="recipe-top">
     <div>
-        <%= image_tag @dish.image, alt:@dish_name, class:'artwork' %>
+        <%= cl_image_tag(@dish.image, alt:@dish.name, class:'artwork') %>
     </div>
     
     <div class="recipe">
@@ -179,7 +179,7 @@
         <% @dish.categories.sample.dishes[-5..-1].each do |dish| %>
             <div>
                 <%= link_to dish_path(dish) do %>
-                    <%= image_tag dish.image, class: "dish-others-thumbnail", alt: dish.name %> 
+                    <%= cl_image_tag dish.image, class: "dish-others-thumbnail", alt: dish.name %> 
                     <h5><%= dish.name %></h5>
                 <% end %>
             </div>
