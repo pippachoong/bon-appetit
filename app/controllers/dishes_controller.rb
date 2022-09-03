@@ -12,8 +12,7 @@ class DishesController < ApplicationController
   def create
     @dish = Dish.new dish_params
     @dish.user_id = @current_user.id
-    @dish.save #this is actually the create, the DB insert
-
+    
     # Check if a file was uploaded via the form, and if so,
     # and then forward that file ID it gives us back, into the 
     # recipebook object
@@ -22,7 +21,9 @@ class DishesController < ApplicationController
       response = Cloudinary::Uploader.upload params[:dish][:image]
       @dish.image = response["public_id"]#view in iTerm/terminal
     end # image upload
-
+    
+    @dish.save #this is actually the create, the DB insert
+    
     # look up the categories selected in form checkboxes and associate them with this new dish
     # @dish.categories only takes in object and cannot take in ids. So .find will convert into objects for us
     @dish.categories << Category.find(params[:category_ids])
