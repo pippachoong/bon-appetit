@@ -39,8 +39,8 @@ We were given a week to build a full-stack application with Rails app applying w
 #### Tools Used 
 
 > * Ruby on Rails
-> * SCSS & CSS
-> * HTML & ERB
+> * CSS
+> * HTML 
 > * Heroku
 > * Cloudinary
 
