@@ -8,7 +8,7 @@
 
 
 <div class= "dishes-container">
-    <% @dishes.all.each do |dish| %>
+    <% @dishes.each do |dish| %>
             <div >
                 <%= link_to dish_path(dish.id) do %>
                     <%= cl_image_tag dish.image, class: "dish-show-thumbnail" %>

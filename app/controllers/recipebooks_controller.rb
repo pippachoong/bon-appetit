@@ -58,7 +58,6 @@ class RecipebooksController < ApplicationController
       @recipebook.image = response["public_id"]#view in iTerm/terminal
     end # image upload
 
-
     @recipebook.save #this is actually the create, the DB insert
     if @recipebook.persisted?
       redirect_to recipebooks_path
@@ -70,7 +69,6 @@ class RecipebooksController < ApplicationController
   end
 
   def index
-
      @recipebooks = Recipebook.all
   end
 

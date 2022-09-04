@@ -23,7 +23,7 @@ class DishesController < ApplicationController
     end # image upload
     
     @dish.save #this is actually the create, the DB insert
-    
+
     # look up the categories selected in form checkboxes and associate them with this new dish
     # @dish.categories only takes in object and cannot take in ids. So .find will convert into objects for us
     @dish.categories << Category.find(params[:category_ids])
@@ -42,7 +42,10 @@ class DishesController < ApplicationController
 
   # READ ----------
   def index
-    @dishes = Dish.all
+    @dishes = Dish.all.sort_by do |dish| 
+      dish[:created_at]
+    end.reverse 
+    #   ^^chaining function, 'reverse' at the end to sort the decending order of dishes 
     
     
   end

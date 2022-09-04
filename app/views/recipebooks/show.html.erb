@@ -4,7 +4,7 @@
     <!-- safe is from breaking-->
     <!--cant use @cl_image_tag here as need to make it a background image from div, hence cl link was pasted--->
     <% if @recipebook.image.present? %>
-        <div class="recipebook-cover-image" style="background-image: url(https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662076558/samples/recipebooks/<%= @recipebook.image%>.webp);">
+        <div class="recipebook-cover-image" style="background-image: url(https://res.cloudinary.com/dwmvmdhlu/image/upload/v1662076558/samples/recipebooks/<%= @recipebook.image%>);">
         </div>
 
     <% end %>
